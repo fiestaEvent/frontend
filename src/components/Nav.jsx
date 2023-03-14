@@ -14,6 +14,10 @@ const routes = [
     path: "/services",
   },
   {
+    name: "Testimonials",
+    path: "/testimonials",
+  },
+  {
     name: "Contact",
     path: "/contact",
   },
@@ -26,8 +30,14 @@ export default function Navbar() {
     setActive(path);
   }, [path]);
   return (
-    <div className="absolute" onClick={()=>{if(open)setOpen(!open)}}>
-      <div className="fixed h-16 md:h-12 shadow-sm bg-black shadow-[#222] w-full flex flex-col justify-center">
+    <div
+      className="absolute z-50"
+      onClick={() => {
+        if (open) setOpen(!open);
+      }}
+    >
+      <div className="fixed h-20 shadow-sm bg-black shadow-[#222] w-full flex flex-row items-center justify-center">
+        <img src="/logo.jpeg" className="h-20 w-20" alt="logo" />
         <div
           id="md+"
           className="ml-auto hidden md:flex flex-row justify-evenly w-3/5 min-w-fit align-middle"
@@ -88,14 +98,18 @@ export default function Navbar() {
         className={`fixed top-0 pt-12 h-screen w-3/4 max-w-[250px] md:hidden ${
           open ? "translate-x-0" : "-translate-x-72"
         }
-         transition-all ease-in-out duration-500 flex flex-col bg-slate-900 bg-opacity-90`}
+         transition-all ease-in-out duration-500 flex flex-col bg-slate-900 bg-opacity-95`}
       >
         {routes.map((route, index) => (
           <Link
             key={index}
             to={route.path}
             className={`text-yellow-100 hover:text-yellow-300 py-4 px-4 transition-all duration-300 ease-in-out
-            ${active === route.path ? "text-yellow-200 bg-slate-700" : "text-yellow-100"}
+            ${
+              active === route.path
+                ? "text-yellow-200 bg-slate-700"
+                : "text-yellow-100"
+            }
             `}
           >
             {route.name}
