@@ -37,7 +37,12 @@ export default function Navbar() {
       }}
     >
       <div className="fixed h-20 shadow-sm bg-black shadow-[#222] w-full flex flex-row items-center justify-center">
-        <img src="/logo.jpeg" className="h-20 w-20" alt="logo" />
+        <div
+          className="text-4xl pl-5"
+          style={{ fontFamily: `'Italianno', cursive` }}
+        >
+          Fiesta Events
+        </div>
         <div
           id="md+"
           className="ml-auto hidden md:flex flex-row justify-evenly w-3/5 min-w-fit align-middle"

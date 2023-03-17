@@ -26,6 +26,11 @@ const stats = [
   },
 ];
 export default function About() {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  })
   return (
     <div className="min-h-screen w-full flex flex-col justify-start">
       <div className="text-3xl lg:text-5xl font-light w-11/12 mx-auto text-left mt-32">
@@ -37,7 +42,7 @@ export default function About() {
             <div className="flex flex-col-reverse lg:flex-row justify-center my-5 w-full">
               <div className="flex-wrap flex lg:w-1/2 justify-center">
                 {stat.sub.map((item) => (
-                  <div className="relative group h-12 lg:h-16 w-5/6 max-w-sm lg:w-44 p-2 hover:bg-opacity-0 transition-all duration-300 bg-white bg-opacity-40 text-white font-semibold border-4 border-opacity-70 border-white m-2 lg:m-4 whitespace-normal">
+                  <div className="relative group h-12 lg:h-16 w-5/6 max-w-sm lg:w-44 p-2 hover:bg-opacity-20 transition-all duration-300 bg-white bg-opacity-0 text-white font-semibold border-4 border-opacity-70 border-white m-2 lg:m-4 whitespace-normal">
                     {item.tag}
                   </div>
                 ))}

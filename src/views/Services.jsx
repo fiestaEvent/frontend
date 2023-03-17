@@ -38,6 +38,11 @@ const stats = [
   },
 ];
 export default function Services() {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  })
   return (
     <div className="min-h-screen w-full flex flex-col justify-start">
       <div className="text-3xl lg:text-5xl font-light w-11/12 mx-auto text-left mt-32">

@@ -7,13 +7,12 @@ import About from "./views/About";
 import Services from "./views/Services";
 import Contact from "./views/Contact";
 import Testimonial from "./views/Testimonial";
-
 function App() {
   return (
-    <div className="App bg-[url('https://i.imgur.com/OZdK0mn.png')] bg-cover">
+    <div className="App bg-[url('https://i.imgur.com/qXVQ2nF.png')] bg-fixed bg-cover">
       <HashRouter>
         <Navbar />
-        <Routes>
+          <Routes>
           <Route path="/testimonials" element={<Testimonial />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />

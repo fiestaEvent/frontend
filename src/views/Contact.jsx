@@ -18,6 +18,11 @@ function ContactForm() {
   if (state.succeeded) {
     return <p className="max-w-4xl w-72 md:w-84 text-center mt-20 lg:w-96 my-3 p-4 bg-white bg-opacity-10 border-4 border-[#ffffff11] m-auto">Thanks for joining!</p>;
   }
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  })
   return (
     <form onSubmit={handleSubmit} className="flex flex-col">
       <input className="max-w-4xl  w-72 md:w-84 lg:w-96 my-1 lg:my-3 p-4 bg-white bg-opacity-10 border-4 border-[#ffffff11] m-auto" id="email" type="email" name="email" placeholder="Email" />
