@@ -14,6 +14,10 @@ const routes = [
     path: "/services",
   },
   {
+    name: "Gallery",
+    path: "/gallery",
+  },
+  {
     name: "Testimonials",
     path: "/testimonials",
   },
