@@ -8,6 +8,7 @@ import Services from "./views/Services";
 import Contact from "./views/Contact";
 import Testimonial from "./views/Testimonial";
 import Gallery from "./views/Gallery";
+import Preloader from "./views/Preloader";
 function App() {
   return (
     <div className="App bg-[url('https://i.imgur.com/qXVQ2nF.png')] bg-fixed bg-cover">
@@ -19,7 +20,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Preloader />} />
         </Routes>
         <Footer />
       </HashRouter>

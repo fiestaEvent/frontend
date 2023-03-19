@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const routes = [
   {
     name: "Home",
-    path: "/",
+    path: "/home",
   },
   {
     name: "About",
