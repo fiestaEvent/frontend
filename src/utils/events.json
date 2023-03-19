@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Corporate Event",
+    "sub": [
+      { "tag": "Brand/ Product Launch", "img": "" },
+      { "tag": "Anniversary", "img": "" },
+      { "tag": "Award function", "img": "" },
+      { "tag": "Seminars", "img": "" },
+      { "tag": "Team Building", "img": "" },
+      { "tag": "Milestones", "img": "" },
+      { "tag": "Launch Party", "img": "" },
+      { "tag": "Office Outings", "img": "" }
+    ]
+  },
+  {
+    "title": "Social Events",
+    "sub": [
+      { "tag": "Weddings/ Receptions", "img": "" },
+      { "tag": "Engagements", "img": "" },
+      { "tag": "Bachelorette", "img": "" },
+      { "tag": "Baby shower", "img": "" },
+      { "tag": "Birthday parties", "img": "" },
+      { "tag": "Family Get-together", "img": "" }
+    ]
+  }
+]

@@ -1,20 +1,4 @@
-const data = [
-  {
-    name: "John Doe",
-    image: "https://i.imgur.com/VfzpNHY.png",
-    text: "Lorem ipsum dolor sit amet consec tetur adipisicing elit. Quisquam, quod.",
-  },
-  {
-    name: "Jane Doe",
-    image: "https://i.imgur.com/QQyy4jB.png",
-    text: "Lorem ipsum dolor sit amet consec tetur adipisicing elit. Quisquam, quod.",
-  },
-  {
-    name: "John Doe",
-    image: "https://i.imgur.com/VfzpNHY.png",
-    text: "Lorem ipsum dolor sit amet consec tetur adipisicing elit. Quisquam, quod.",
-  },
-];
+import data from "../utils/testimonials.json";
 export default function Testimonial() {
   window.scrollTo({
     top: 0,

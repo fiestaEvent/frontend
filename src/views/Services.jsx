@@ -1,42 +1,5 @@
 import { Link } from "react-router-dom";
-const stats = [
-  {
-    tag: "Concept Planning",
-    img: "https://st.depositphotos.com/2885805/5036/v/600/depositphotos_50360617-stock-illustration-business-peoples.jpg",
-  },
-  {
-    tag: "Venue Selection",
-    img: "https://cdn.oliverbonacininetwork.com/uploads/sites/42/2017/08/oliver-bonacini-hospitality-venue-carlu-1024x1000.jpg",
-  },
-  {
-    tag: "Logistic Support",
-    img: "https://www.mmh.com/images/top20warehouse1218.jpg",
-  },
-  {
-    tag: "Guest Accommodation",
-    img: "http://dimg04.c-ctrip.com/images/0220i12000a0b1tx306A1.jpg",
-  },
-  {
-    tag: "Decoration",
-    img: "https://covercupboard.co.uk/wp-content/uploads/2022/05/wedding-centrepieces-hire-table-sq-venue-dressing-devon.jpeg",
-  },
-  {
-    tag: "Food & Beverage Management",
-    img: "https://hospitality-on.com/sites/default/files/2022-05/pexels-fauxels-3184195_1.jpg",
-  },
-  {
-    tag: "Entertainment",
-    img: "https://www.alwaysthevip.com/wp-content/uploads/Paradise-Club-at-Edition-Hotel-Times-Square-NYC-Crowded-Dance-floor-Main-Stage-Table-Reservations-at-Always-The-VIP-768x753.jpg",
-  },
-  {
-    tag: "Photography/ Videography",
-    img: "https://rkfmaproductions.com/wp-content/uploads/2020/04/square_thumb@2x.jpg",
-  },
-  {
-    tag: "Onsite Support Stuff",
-    img: "https://covenantcomputing.net/wp-content/uploads/2021/10/amy-hirschi-K0c8ko3e6AA-unsplash-1-scaled-1-300x300-1-300x300.jpeg",
-  },
-];
+import stats from "../utils/services.json";
 export default function Services() {
   window.scrollTo({
     top: 0,

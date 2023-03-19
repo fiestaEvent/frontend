@@ -1,38 +1,13 @@
 import { Link } from "react-router-dom";
-const stats = [
-  {
-    title: "Corporate Event",
-    sub: [
-      { tag: "Brand/ Product Launch", img: "" },
-      { tag: "Anniversary", img: "" },
-      { tag: "Award function", img: "" },
-      { tag: "Seminars", img: "" },
-      { tag: "Team Building", img: "" },
-      { tag: "Milestones", img: "" },
-      { tag: "Launch Party", img: "" },
-      { tag: "Office Outings", img: "" },
-    ],
-  },
-  {
-    title: "Social Events",
-    sub: [
-      { tag: "Weddings/ Receptions", img: "" },
-      { tag: "Engagements", img: "" },
-      { tag: "Bachelorette", img: "" },
-      { tag: "Baby shower", img: "" },
-      { tag: "Birthday parties", img: "" },
-      { tag: "Family Get-together", img: "" },
-    ],
-  },
-];
+import stats from "../utils/events.json";
 export default function About() {
   window.scrollTo({
     top: 0,
     left: 0,
     behavior: "smooth",
-  })
+  });
   return (
-    <div className="min-h-screen w-full flex flex-col justify-start">
+    <div className="min-h-screen w-full flex flex-col justify-between">
       <div className="text-3xl lg:text-5xl font-light w-11/12 mx-auto text-left mt-32">
         What We Do
       </div>
@@ -54,9 +29,12 @@ export default function About() {
           ))}
         </div>
       </div>
-      <div className="w-full h-60 bg-yellow-200 flex flex-col justify-center mt-10">
-        <Link to="/services" className="font-light bg-black border-2 border-black m-auto w-fit text-3xl p-5 transition-all duration-700 hover:bg-transparent hover:text-black">
-        OUR SERVICES
+      <div className="w-full h-60 bg-yellow-200 flex flex-col justify-center mt-28">
+        <Link
+          to="/services"
+          className="font-light bg-black border-2 border-black m-auto w-fit text-3xl p-5 transition-all duration-700 hover:bg-transparent hover:text-black"
+        >
+          OUR SERVICES
         </Link>
       </div>
     </div>
