@@ -12,11 +12,11 @@ export default function Testimonial() {
       </div>
       <div className="flex flex-row flex-wrap items-center justify-center mt-20 ">
         {data.map((item) => (
-          <div className="group relative mt-20 transition-all duration-300 h-72 w-60 border-4 border-[#ffffffbb] hover:bg-black hover:bg-opacity-40 m-3 flex flex-col justify-evenly">
+          <div className="group relative mt-20 transition-all duration-300 min-h-96 w-96 border-4 border-[#ffffffbb] hover:bg-black hover:bg-opacity-40 m-3 flex flex-col justify-evenly">
             <img
               src={item.image}
               alt="bust"
-              className="h-40 w-40 rounded-full absolute -top-20 left-10 border-4 border-[#ffffffaa] p-1"
+              className="h-40 w-40 rounded-full absolute -top-20 left-28 border-4 border-[#ffffffaa] p-1"
             />
             <div className="text-lg text-center font-semibold mt-20">
               {item.name}
