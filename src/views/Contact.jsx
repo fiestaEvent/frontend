@@ -20,7 +20,7 @@ function ContactForm() {
   if (state.succeeded) {
     return (
       <p className="max-w-4xl w-72 md:w-84 text-center mt-20 lg:w-96 my-3 p-4 bg-white bg-opacity-10 border-4 border-[#ffffff11] m-auto">
-        Thanks for joining!
+        Thanks for your response!
       </p>
     );
   }
@@ -69,6 +69,7 @@ export default function Contact() {
       <div className="text-2xl lg:text-5xl font-light w-11/12 mx-auto text-left mt-32">
         Reach Out To Us
       </div>
+      <ContactForm />
       <div className="flex flex-col lg:flex-row flex-wrap items-center mt-6 mx-auto">
         {contact.map((stat) => (
           <div className="p-2 lg:text-xl w-64 h-16 transition-all duration-200 bg-gray-400 bg-opacity-10 hover:bg-opacity-20 m-1 lg:m-5 border-2 border-[#ffffff11]">
@@ -81,7 +82,6 @@ export default function Contact() {
           </div>
         ))}
       </div>
-      <ContactForm />
     </div>
   );
 }

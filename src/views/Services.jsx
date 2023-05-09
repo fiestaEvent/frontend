@@ -14,7 +14,7 @@ export default function Services() {
       <div className="flex flex-row flex-wrap bg-black bg-opacity-50 mx-auto md:mx-10 md:px-40 items-center justify-center mt-20 ">
         {stats.map((stat) => (
           <div className="relative text-lg -top-12 w-60 h-60 text-yellow-200 transition-all duration-200 bg-opacity-20 mx-5">
-            <img src={stat.img} alt="" className="w-60 h-44" />
+            <img src={stat.img} alt="" className="w-60 h-44 rounded-md" />
             <div className="text-center leading-tight mt-1">{stat.tag}</div>
           </div>
         ))}
