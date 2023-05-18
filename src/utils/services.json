@@ -1,38 +1,57 @@
 [
   {
     "tag": "Concept Planning",
-    "img": "https://st.depositphotos.com/2885805/5036/v/600/depositphotos_50360617-stock-illustration-business-peoples.jpg"
+    "desc": "Share your ideas, choose a theme and set the foundation.",
+    "img": "./services/idea.png"
   },
   {
     "tag": "Venue Selection",
-    "img": "https://cdn.oliverbonacininetwork.com/uploads/sites/42/2017/08/oliver-bonacini-hospitality-venue-carlu-1024x1000.jpg"
+    "desc": "Find out the right space within your budget.",
+    "img": "./services/location.png"
   },
   {
     "tag": "Logistic Support",
-    "img": "https://academia.co.uk/wp-content/uploads/2020/04/CHM_warehouse.png"
-  },
-  {
-    "tag": "Guest Accommodation",
-    "img": "http://dimg04.c-ctrip.com/images/0220i12000a0b1tx306A1.jpg"
+    "desc": "We handle all the logistics, ensuring seamless support for your event.",
+    "img": "./services/logistics.png"
   },
   {
     "tag": "Decoration",
-    "img": "https://covercupboard.co.uk/wp-content/uploads/2022/05/wedding-centrepieces-hire-table-sq-venue-dressing-devon.jpeg"
+    "desc": "Creative and attractive quality decor matching with your theme and event.",
+    "img": "./services/decor.png"
   },
   {
-    "tag": "Food & Beverage Management",
-    "img": "https://hospitality-on.com/sites/default/files/2022-05/pexels-fauxels-3184195_1.jpg"
+    "tag": "Food & Beverage",
+    "desc": "Delicious culinary experience with diverse range of cuisines for both buffet and à la carte.",
+    "img": "./services/food.png"
   },
   {
     "tag": "Entertainment",
-    "img": "https://www.alwaysthevip.com/wp-content/uploads/Paradise-Club-at-Edition-Hotel-Times-Square-NYC-Crowded-Dance-floor-Main-Stage-Table-Reservations-at-Always-The-VIP-768x753.jpg"
+    "desc": "From Djs and traditional performance  to engaging fun activities we have it all.",
+    "img": "./services/entertainment.png"
   },
   {
     "tag": "Photography/ Videography",
-    "img": "https://rkfmaproductions.com/wp-content/uploads/2020/04/square_thumb@2x.jpg"
+    "desc": "High quality traditional and modern shots are taken to cover the entire event.",
+    "img": "./services/videocam.png"
+  },
+  {
+    "tag": "Makeup & Styling",
+    "desc": "Talented MUA who ensure you look your best.",
+    "img": "./services/mua.png"
+  },
+  {
+    "tag": "Invite",
+    "desc": "Creative e-invite with videos and themed hard copy setting the tone.",
+    "img": "./services/invite.png"
+  },
+  {
+    "tag": "Gifting",
+    "desc": "Assistance in selecting guest favors that perfectly align with your event's theme.",
+    "img": "./services/gift.png"
   },
   {
     "tag": "Onsite Support Stuff",
-    "img": "https://covenantcomputing.net/wp-content/uploads/2021/10/amy-hirschi-K0c8ko3e6AA-unsplash-1-scaled-1-300x300-1-300x300.jpeg"
+    "desc": "Dedicated onsite support staff who will assist and manage every aspect of your event, ensuring its smooth execution.",
+    "img": "./services/support.png"
   }
 ]

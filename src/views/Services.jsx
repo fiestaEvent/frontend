@@ -5,17 +5,26 @@ export default function Services() {
     top: 0,
     left: 0,
     behavior: "smooth",
-  })
+  });
   return (
     <div className="min-h-screen w-full flex flex-col justify-start">
       <div className="text-3xl lg:text-5xl font-light w-11/12 mx-auto text-left mt-32">
         What we provide
       </div>
-      <div className="flex flex-row flex-wrap bg-black bg-opacity-50 mx-auto md:mx-10 md:px-40 items-center justify-center mt-20 ">
+      <div className="flex flex-row flex-wrap mx-auto md:mx-10 items-center justify-center mt-20 ">
         {stats.map((stat) => (
-          <div className="relative text-lg -top-12 w-60 h-60 text-yellow-200 transition-all duration-200 bg-opacity-20 mx-5">
-            <img src={stat.img} alt="" className="w-60 h-44 rounded-md" />
-            <div className="text-center leading-tight mt-1">{stat.tag}</div>
+          <div className="relative w-60 h-60 m-3 p-3 text-white flex flex-col items-end justify-between transition-all duration-200 bg-purple-900 rounded-sm">
+            <img
+              src={stat.img}
+              className="w-16 mx-auto bg-white p-1 rounded-full"
+              alt="icon"
+            />
+            <div className="h-44 w-11/12 flex flex-col justify-evenly">
+              <div className="font-bold text-[10pt]">{stat.tag}</div>
+              <div className="font-light text-base text-center">
+                {stat.desc}
+              </div>
+            </div>
           </div>
         ))}
       </div>
