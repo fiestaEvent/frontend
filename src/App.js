@@ -12,9 +12,9 @@ import Gallery from "./views/Gallery";
 import Preloader from "./views/Preloader";
 function App() {
   return (
-    <div className="App bg-[url('https://i.imgur.com/qXVQ2nF.png')] bg-fixed bg-cover">
+    <div className="App bg-[url('https://i.imgur.com/qXVQ2nF.pn')] bg-gray-100 bg-fixed bg-cover">
       <Helmet>
-        <title>Fiesta - Event Management</title>
+        <title>Fiesta | Events</title>
         <meta
           name="description"
           content="We offer professional event management services for all types of occasions, including weddings, corporate events, and parties. Trust Fiesta to handle all aspects of your event planning, from venue selection to decor and entertainment. Make your event a success with us.From intimate gatherings to large-scale events, Fiesta creates experiences that leave a lasting impression. Contact us today to start planning your event."

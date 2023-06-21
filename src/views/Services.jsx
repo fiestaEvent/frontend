@@ -8,15 +8,18 @@ export default function Services() {
   });
   return (
     <div className="min-h-screen w-full flex flex-col justify-start">
-      <div className="text-3xl lg:text-5xl font-light w-11/12 mx-auto text-left mt-32">
+      <div
+        className="text-3xl lg:text-5xl text-purple-900 font-light w-11/12 mx-auto text-left mt-32"
+        style={{ fontFamily: `'Handlee', cursive` }}
+      >
         What we provide
       </div>
-      <div className="flex flex-row flex-wrap mx-auto md:mx-10 items-center justify-center mt-20 ">
+      <div className="flex flex-row flex-wrap max-w-[1000px] mx-auto items-center justify-center mt-20 ">
         {stats.map((stat) => (
-          <div className="relative w-60 h-60 m-3 p-3 text-white flex flex-col items-end justify-between transition-all duration-200 bg-purple-900 rounded-sm">
+          <div className="relative w-60 bg-slate-50 h-60 m-3 p-3 text-indigo-900 flex flex-col items-end justify-between transition-all duration-200 bg-yellow-20 rounded-sm">
             <img
               src={stat.img}
-              className="w-16 mx-auto bg-white p-1 rounded-full"
+              className="w-16 mx-auto p-1 rounded-full"
               alt="icon"
             />
             <div className="h-44 w-11/12 flex flex-col justify-evenly">
@@ -29,20 +32,20 @@ export default function Services() {
         ))}
       </div>
 
-      <div className="w-full h-80 md:h-96 bg-yellow-200 flex flex-col justify-evenly mt-10 md:mt-20">
-        <div className="text-4xl md:text-6xl font-bold max-w-xl text-center align-middle mx-auto text-black">
+      <div className="w-full h-80 md:h-96 bg-indigo-900 text-white flex flex-col justify-evenly mt-10 md:mt-20">
+        <div className="text-4xl md:text-6xl font-bold max-w-xl text-center align-middle mx-auto">
           PLANNING YOUR NEXT EVENT?
         </div>
         <div className="w-full flex justify-center items-center text-xs font-bold">
           <Link
             to="/contact"
-            className="text-yellow-200 mr-2 bg-black border-2 border-black w-fit p-3 transition-all duration-700 hover:bg-transparent hover:text-black"
+            className="text-indigo-900 mr-2 bg-white border-2 border-white w-fit p-3 transition-all duration-700 hover:bg-transparent hover:text-white"
           >
             Let's Talk
           </Link>
           <Link
             to="/testimonials"
-            className="text-black border-2 border-black w-fit p-3 transition-all duration-700 hover:bg-black hover:text-yellow-200"
+            className="text-white border-2 border-white w-fit p-3 transition-all duration-700 hover:bg-white hover:text-indigo-900"
           >
             Hear from our Clients
           </Link>

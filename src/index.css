@@ -8,8 +8,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #000;
-  color: rgb(255, 255, 232);
+  background-color: #fff;
+  color: rgb(0, 0, 0);
   font-family: 'Albert Sans', sans-serif;
 }
 

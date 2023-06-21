@@ -40,11 +40,12 @@ export default function Navbar() {
         if (open) setOpen(!open);
       }}
     >
-      <div className="fixed h-20 shadow-sm bg-black shadow-[#222] w-full flex flex-row items-center justify-center">
+      <div className="fixed h-20 shadow-sm bg-white w-full flex flex-row items-center justify-center">
         <div
-          className="text-4xl pl-5"
-          style={{ fontFamily: `'Italianno', cursive` }}
+          className="text-4xl text-indigo-900 pl-5"
+          style={{ fontFamily: `'Cedarville Cursive', cursive` }}
         >
+          <img src="/f-fiesta.png" alt="logo" className="h-10 w-10 inline"/>
           Fiesta Events
         </div>
         <div
@@ -55,8 +56,8 @@ export default function Navbar() {
             <Link
               key={index}
               to={route.path}
-              className={`text-yellow-100 hover:text-yellow-300 transition-all duration-300 ease-in-out
-          ${active === route.path ? "text-yellow-200" : "text-yellow-100"}
+              className={`text-indigo-900 transition-all duration-300 ease-in-out
+          ${active === route.path ? "text-red-900 font-bold" : "text-indigo-900"}
           `}
             >
               {route.name}
@@ -65,7 +66,7 @@ export default function Navbar() {
         </div>
         <div
           id="md-"
-          className="ml-auto md:hidden p-3 bg-blue-300 bg-opacity-20 rounded-full mt-1 mr-1"
+          className="ml-auto md:hidden p-3 text-indigo-900 rounded-full mt-1 mr-1"
           onClick={() => setOpen(!open)}
         >
           {!open ? (
@@ -75,7 +76,7 @@ export default function Navbar() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-8 h-8"
             >
               <path
                 strokeLinecap="round"
@@ -90,7 +91,7 @@ export default function Navbar() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-8 h-8"
             >
               <path
                 strokeLinecap="round"
@@ -107,24 +108,24 @@ export default function Navbar() {
         className={`fixed top-0 pt-12 h-screen w-3/4 max-w-[250px] md:hidden ${
           open ? "translate-x-0" : "-translate-x-72"
         }
-         transition-all ease-in-out duration-500 flex flex-col bg-slate-900 bg-opacity-95`}
+         transition-all ease-in-out duration-500 flex flex-col bg-slate-50`}
       >
         {routes.map((route, index) => (
           <Link
             key={index}
             to={route.path}
-            className={`text-yellow-100 hover:text-yellow-300 py-4 px-4 transition-all duration-300 ease-in-out
+            className={`text-indigo-900 py-4 px-4 transition-all duration-300 ease-in-out
             ${
               active === route.path
-                ? "text-yellow-200 bg-slate-700"
-                : "text-yellow-100"
+                ? "text-red-900 font-bold"
+                : "text-indigo-900"
             }
             `}
           >
             {route.name}
           </Link>
         ))}
-        <h1 className="bottom-16 fixed">&copy;Fiesta Events 2023</h1>
+        <h1 className="bottom-16 fixed text-black">&copy;Fiesta Events 2023</h1>
       </div>
     </div>
   );

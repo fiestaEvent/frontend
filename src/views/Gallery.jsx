@@ -17,8 +17,11 @@ export default function Gallery() {
   }, []);
   return (
     <div className="min-h-screen w-full flex flex-col justify-start">
-      <div className="text-2xl lg:text-5xl font-light w-11/12 mx-auto text-left mt-32">
-        Glimpes from our past events
+      <div
+        className="text-3xl lg:text-5xl text-purple-900 font-light w-11/12 mx-auto text-left mt-32"
+        style={{ fontFamily: `'Handlee', cursive` }}
+      >
+        Glimpes from our Past Events
       </div>
       <div className="justify-center flex-wrap w-11/12 my-20 mx-auto hidden md:flex">
         {sources.map((source, index) => (
@@ -38,23 +41,18 @@ export default function Gallery() {
       <Carousel
         autoPlay
         infiniteLoop
+        interval={2000}
         showThumbs={false}
         showStatus={false}
         showIndicators={false}
-        className="md:hidden"
+        showArrows={false}
+        className="md:hidden my-20"
         swipeable
-        centerMode
       >
         {sources.map((source, index) => (
-          <div
-            className="h-52 p-1 w-72 m-10 mt-20 relative overflow-hidden rounded-md"
-            id={index}
-            onClick={() =>
-              setToggler({ toggler: !toggler.toggler, slide: index + 1 })
-            }
-          >
+          <div className="" id={index}>
             <img
-              className="h-full group w-full object-cover rounded-md hover:scale-125 transition-all duration-300"
+              className="h-[50vh] rounded-lg relative overflow-hidden max-w-[80vw] lg:max-w-xl bg-cover"
               src={source}
               alt={index}
             />
