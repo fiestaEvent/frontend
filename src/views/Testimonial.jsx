@@ -15,13 +15,13 @@ export default function Testimonial() {
       </div>
       <div className="flex flex-row flex-wrap items-center justify-center mt-20 ">
         {data.map((item) => (
-          <div className="group text-indigo-900 relative mt-14 transition-all duration-300 min-h-96 w-96 border border-indigo-900 m-3 flex flex-col justify-evenly">
+          <div className="group scale-75 md:scale-100 text-fuchsia-900 bg-white relative mt-14 transition-all duration-300 min-h-96 w-96 border border-fuchsia-900 m-3 flex flex-col justify-evenly">
             {/* <img
               src={item.image}
               alt="bust"
               className="h-40 w-40 rounded-full absolute -top-20 left-28 border-4 border-[#ffffffaa] p-1"
             /> */}
-            <div className="absolute h-full w-full -top-2 -left-2 border border-indigo-900"></div>
+            <div className="absolute h-full w-full -top-2 -left-2 border border-fuchsia-900"></div>
             <div className="text-lg text-left font-semibold mt-4 ml-10">
               {item.name}
             </div>

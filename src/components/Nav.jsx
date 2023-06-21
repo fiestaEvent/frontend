@@ -41,13 +41,15 @@ export default function Navbar() {
       }}
     >
       <div className="fixed h-20 shadow-sm bg-white w-full flex flex-row items-center justify-center">
-        <div
-          className="text-4xl text-indigo-900 pl-5"
+        <Link
+          className="text-4xl text-fuchsia-900 pl-5"
+          to="/"
           style={{ fontFamily: `'Cedarville Cursive', cursive` }}
         >
-          <img src="/f-fiesta.png" alt="logo" className="h-10 w-10 inline"/>
+          {/* <img src="/f-
+          .png" alt="logo" className="h-10 w-10 inline"/> */}
           Fiesta Events
-        </div>
+        </Link>
         <div
           id="md+"
           className="ml-auto hidden md:flex flex-row justify-evenly w-3/5 min-w-fit align-middle"
@@ -56,8 +58,8 @@ export default function Navbar() {
             <Link
               key={index}
               to={route.path}
-              className={`text-indigo-900 transition-all duration-300 ease-in-out
-          ${active === route.path ? "text-red-900 font-bold" : "text-indigo-900"}
+              className={`text-fuchsia-900 transition-all duration-300 ease-in-out
+          ${active === route.path ? "text-red-900 font-bold" : "text-fuchsia-900"}
           `}
             >
               {route.name}
@@ -66,7 +68,7 @@ export default function Navbar() {
         </div>
         <div
           id="md-"
-          className="ml-auto md:hidden p-3 text-indigo-900 rounded-full mt-1 mr-1"
+          className="ml-auto md:hidden p-3 text-fuchsia-900 rounded-full mt-1 mr-1"
           onClick={() => setOpen(!open)}
         >
           {!open ? (
@@ -114,11 +116,11 @@ export default function Navbar() {
           <Link
             key={index}
             to={route.path}
-            className={`text-indigo-900 py-4 px-4 transition-all duration-300 ease-in-out
+            className={`text-fuchsia-900 py-4 px-4 transition-all duration-300 ease-in-out
             ${
               active === route.path
                 ? "text-red-900 font-bold"
-                : "text-indigo-900"
+                : "text-fuchsia-900"
             }
             `}
           >
