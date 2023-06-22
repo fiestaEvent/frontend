@@ -9,6 +9,7 @@ export default function Gallery() {
     slide: 1,
   });
   useEffect(() => {
+    document.title = "Gallery | Fiesta";
     window.scrollTo({
       top: 0,
       left: 0,

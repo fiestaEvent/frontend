@@ -1,10 +1,23 @@
-import data from "../utils/testimonials.json";
+import { baseUrl } from "../utils/api";
+import { useState, useEffect } from "react";
 export default function Testimonial() {
   window.scrollTo({
     top: 0,
     left: 0,
     behavior: "smooth",
   });
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    document.title = "Testimonials | Fiesta";
+    async function fetchData() {
+      await fetch(`${baseUrl}/testimonials`)
+        .then((res) => res.json())
+        .then((res) => {
+          setData(res);
+        });
+    }
+    fetchData();
+  }, []);
   return (
     <div className="min-h-screen w-full flex flex-col justify-start">
       <div
@@ -25,9 +38,11 @@ export default function Testimonial() {
             <div className="text-lg text-left font-semibold mt-4 ml-10">
               {item.name}
             </div>
-            <div className="text-right font-light mr-10">{item.title}</div>
+            <div className="text-right font-light mr-10">
+              {item.designation}
+            </div>
             <div className="text-center text-lg leading-tight p-4 justify-center">
-              " {item.text} "
+              " {item.description} "
             </div>
           </div>
         ))}

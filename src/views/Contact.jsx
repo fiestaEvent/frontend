@@ -1,4 +1,5 @@
-import { useForm, ValidationError } from "@formspree/react";
+import { useState } from "react";
+import { baseUrl } from "../utils/api";
 const contact = [
   {
     name: "Mail",
@@ -16,11 +17,36 @@ const contact = [
   // },
 ];
 function ContactForm() {
-  const [state, handleSubmit] = useForm("mvonqejy");
-  if (state.succeeded) {
+  const [state, setState] = useState(null);
+  const [data, setData] = useState({
+    email: "",
+    phone: "",
+    message: "",
+    eventDate: "",
+  });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const res = await fetch(`${baseUrl}/query`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    const result = await res.json();
+    setState(result.succeeded);
+  };
+  if (state === true) {
     return (
       <p className="max-w-4xl w-72 md:w-84 text-center mt-20 lg:w-96 my-3 p-4 border-4 border-fuchsia-900 m-auto">
         Thanks for your response!
+      </p>
+    );
+  }
+  if (state === false) {
+    return (
+      <p className="max-w-4xl w-72 md:w-84 text-center mt-20 lg:w-96 my-3 p-4 border-4 border-fuchsia-900 m-auto">
+        Something went wrong. Please try again later.
       </p>
     );
   }
@@ -37,6 +63,8 @@ function ContactForm() {
         type="email"
         name="email"
         placeholder="Email"
+        required
+        onChange={(e) => setData({ ...data, email: e.target.value })}
       />
       <input
         className="max-w-4xl  w-72 md:w-84 lg:w-96 my-1 lg:my-3 p-4 bg-opacity-10 border-[1px] border-fuchsia-900 m-auto"
@@ -44,28 +72,45 @@ function ContactForm() {
         type="phone"
         name="phone"
         placeholder="Phone"
+        required
+        onChange={(e) => setData({ ...data, phone: e.target.value })}
       />
-      <ValidationError prefix="Email" field="email" errors={state.errors} />
+      {/* <ValidationError prefix="Email" field="email" errors={state.errors} /> */}
       <select
         className={`max-w-4xl  w-72 md:w-84 lg:w-96 my-1 lg:my-3 p-4 bg-white border-[1px] border-fuchsia-900 m-auto`}
+        id="eventDate"
+        name="eventDate"
+        placeholder="Event Date"
+        required
+        onChange={(e) => setData({ ...data, eventDate: e.target.value })}
       >
-        <option className="bg-white" value="N/A">Event Timeline</option>
-        <option className="bg-white" value="<2 Months">Within next 2 Months</option>
-        <option className="bg-white" value="<6 Months">Within next 6 Months</option>
-        <option className="bg-white" value="1+ Year">Next 1 Year</option>
-        <option className="bg-white" value="N/A">Not yet decided</option>
+        <option className="bg-white" value="N/A">
+          Event Timeline
+        </option>
+        <option className="bg-white" value="<2 Months">
+          Within next 2 Months
+        </option>
+        <option className="bg-white" value="<6 Months">
+          Within next 6 Months
+        </option>
+        <option className="bg-white" value="1+ Year">
+          Next 1 Year
+        </option>
+        <option className="bg-white" value="N/A">
+          Not yet decided
+        </option>
       </select>
       <textarea
         className="max-w-4xl  w-72 md:w-84 lg:w-96 my-1 lg:my-3 p-4 bg-opacity-10 border-[1px] border-fuchsia-900 m-auto"
         id="message"
         name="message"
         placeholder="Message"
+        onChange={(e) => setData({ ...data, message: e.target.value })}
       />
-      <ValidationError prefix="Message" field="message" errors={state.errors} />
+      {/* <ValidationError prefix="Message" field="message" errors={state.errors} /> */}
       <button
         className="my-3 py-2 px-4 transition-all duration-300 text-white bg-fuchsia-900 m-auto"
         type="submit"
-        disabled={state.submitting}
       >
         Submit
       </button>
@@ -73,6 +118,7 @@ function ContactForm() {
   );
 }
 export default function Contact() {
+  document.title = "Contact Us | Fiesta";
   return (
     <div className="min-h-screen w-full text-purple-900 flex flex-col justify-start">
       <div

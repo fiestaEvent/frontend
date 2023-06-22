@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import stats from "../utils/events.json";
 export default function About() {
+  document.title = "About | Fiesta";
   window.scrollTo({
     top: 0,
     left: 0,
