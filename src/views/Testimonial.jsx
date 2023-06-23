@@ -21,14 +21,14 @@ export default function Testimonial() {
   return (
     <div className="min-h-screen w-full flex flex-col justify-start">
       <div
-        className="text-3xl lg:text-5xl text-purple-900 font-light w-11/12 mx-auto text-left mt-32"
+        className="text-xl lg:text-3xl text-purple-900 font-light w-11/12 mx-auto text-left mt-32"
         style={{ fontFamily: `'Handlee', cursive` }}
       >
         Testimonials
       </div>
       <div className="flex flex-row flex-wrap items-center justify-center mt-20 ">
         {data.map((item) => (
-          <div className="group scale-75 md:scale-100 text-fuchsia-900 bg-white relative mt-14 transition-all duration-300 min-h-96 w-96 border border-fuchsia-900 m-3 flex flex-col justify-evenly">
+          <div className="group scale-75 md:scale-100 text-fuchsia-900 bg-[#fdfdfd] relative mt-14 transition-all duration-300 min-h-96 w-96 border border-fuchsia-900 m-3 flex flex-col justify-evenly">
             {/* <img
               src={item.image}
               alt="bust"

@@ -1,0 +1,22 @@
+[
+    {
+        "icon": "bx bx-phone-call",
+        "color": "#0F9D58",
+        "desc": "Connect to us with your plan"
+    },
+    {
+        "icon": "bx bxs-chat",
+        "color": "#DB4437",
+        "desc": "Discuss a plethora of Ideas"
+    },
+    {
+        "icon": "bx bx-credit-card",
+        "color": "#F4B400",
+        "desc": "Book us at a minimal charge"
+    },
+    {
+        "icon": "bx bx-party",
+        "color": "#4285F4",
+        "desc": "Relax and Enjoy your event"
+    }
+]

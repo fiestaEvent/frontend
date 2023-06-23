@@ -5,7 +5,7 @@ export default function Preloader() {
         navigate("/home");
     }, 2000);
   return (
-    <div className="w-full h-screen bg-white z-50 absolute flex justify-center items-center">
+    <div className="w-full h-screen bg-[#fdfdfd] z-50 absolute flex justify-center items-center">
       <img
         src="/logo_clean.png"
         className="h-96 animate-fadein animate-grow"

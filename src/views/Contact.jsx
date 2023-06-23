@@ -77,26 +77,26 @@ function ContactForm() {
       />
       {/* <ValidationError prefix="Email" field="email" errors={state.errors} /> */}
       <select
-        className={`max-w-4xl  w-72 md:w-84 lg:w-96 my-1 lg:my-3 p-4 bg-white border-[1px] border-fuchsia-900 m-auto`}
+        className={`max-w-4xl  w-72 md:w-84 lg:w-96 my-1 lg:my-3 p-4 bg-[#fdfdfd] border-[1px] border-fuchsia-900 m-auto`}
         id="eventDate"
         name="eventDate"
         placeholder="Event Date"
         required
         onChange={(e) => setData({ ...data, eventDate: e.target.value })}
       >
-        <option className="bg-white" value="N/A">
+        <option className="bg-[#fdfdfd]" value="N/A">
           Event Timeline
         </option>
-        <option className="bg-white" value="<2 Months">
+        <option className="bg-[#fdfdfd]" value="<2 Months">
           Within next 2 Months
         </option>
-        <option className="bg-white" value="<6 Months">
+        <option className="bg-[#fdfdfd]" value="<6 Months">
           Within next 6 Months
         </option>
-        <option className="bg-white" value="1+ Year">
+        <option className="bg-[#fdfdfd]" value="1+ Year">
           Next 1 Year
         </option>
-        <option className="bg-white" value="N/A">
+        <option className="bg-[#fdfdfd]" value="N/A">
           Not yet decided
         </option>
       </select>
@@ -109,7 +109,7 @@ function ContactForm() {
       />
       {/* <ValidationError prefix="Message" field="message" errors={state.errors} /> */}
       <button
-        className="my-3 py-2 px-4 transition-all duration-300 text-white bg-fuchsia-900 m-auto"
+        className="my-3 py-2 px-4 transition-all duration-300 text-[#fdfdfd] bg-fuchsia-900 m-auto"
         type="submit"
       >
         Submit
@@ -122,7 +122,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen w-full text-purple-900 flex flex-col justify-start">
       <div
-        className="text-3xl lg:text-5xl font-light w-11/12 mx-auto text-left mt-32"
+        className="text-xl lg:text-3xl font-light w-11/12 mx-auto text-left mt-32"
         style={{ fontFamily: `'Handlee', cursive` }}
       >
         Reach Out To Us
@@ -130,7 +130,7 @@ export default function Contact() {
       <ContactForm />
       <div className="flex flex-col lg:flex-row flex-wrap items-center mt-6 mx-auto">
         {contact.map((stat) => (
-          <div className="p-2 bg-white lg:text-xl w-64 h-16 transition-all duration-200 m-1 lg:m-5 border-2 border-fuchsia-900">
+          <div className="p-2 bg-[#fdfdfd] lg:text-xl w-64 h-16 transition-all duration-200 m-1 lg:m-5 border-2 border-fuchsia-900">
             <div className="text-lg text-fuchsia-900 font-semibold">
               {stat.name}
             </div>

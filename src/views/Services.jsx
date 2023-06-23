@@ -10,7 +10,7 @@ export default function Services() {
   return (
     <div className="min-h-screen w-full flex flex-col justify-start">
       <div
-        className="text-3xl lg:text-5xl text-purple-900 font-light w-11/12 mx-auto text-left mt-32"
+        className="text-xl lg:text-3xl text-purple-900 font-light w-11/12 mx-auto text-left mt-32"
         style={{ fontFamily: `'Handlee', cursive` }}
       >
         What we provide
@@ -33,20 +33,20 @@ export default function Services() {
         ))}
       </div>
 
-      <div className="w-full h-80 md:h-96 bg-fuchsia-900 text-white flex flex-col justify-evenly mt-10 md:mt-20">
-        <div className="text-4xl md:text-6xl font-bold max-w-xl text-center align-middle mx-auto">
+      <div className="w-full h-80 md:h-96 bg-fuchsia-900 text-[#fdfdfd] flex flex-col justify-evenly mt-10 md:mt-20">
+        <div className="text-4xl md:text-8xl font-bold max-w-xl text-center align-middle mx-auto">
           PLANNING YOUR NEXT EVENT?
         </div>
         <div className="w-full flex justify-center items-center text-xs font-bold">
           <Link
             to="/contact"
-            className="text-fuchsia-900 mr-2 bg-white border-2 border-white w-fit p-3 transition-all duration-700 hover:bg-transparent hover:text-white"
+            className="text-fuchsia-900 mr-2 bg-[#fdfdfd] border-2 border-[#fdfdfd] w-fit p-3 transition-all duration-700 hover:bg-transparent hover:text-[#fdfdfd]"
           >
             Let's Talk
           </Link>
           <Link
             to="/testimonials"
-            className="text-white border-2 border-white w-fit p-3 transition-all duration-700 hover:bg-white hover:text-fuchsia-900"
+            className="text-[#fdfdfd] border-2 border-[#fdfdfd] w-fit p-3 transition-all duration-700 hover:bg-[#fdfdfd] hover:text-fuchsia-900"
           >
             Hear from our Clients
           </Link>

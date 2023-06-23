@@ -12,7 +12,7 @@ import Gallery from "./views/Gallery";
 import Preloader from "./views/Preloader";
 function App() {
   return (
-    <div className="App bg-[url('https://i.imgur.com/qXVQ2nF.pn')] bg-pink-200 bg-fixed bg-cover"
+    <div className="App bg-[url('https://i.imgur.com/qXVQ2nF.pn')] bg-fuchsia-50 bg-fixed bg-cover"
     >
       <Helmet>
         <title>Fiesta | Events</title>
