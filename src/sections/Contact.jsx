@@ -65,7 +65,7 @@ function ContactForm() {
     >
       <div className="md:absolute top-28 left-[10vw] flex flex-col min-w-[100%] md:min-w-[35vw] max-w-[80%] md:max-w-[300px] md:bg-rose-600 p-10 text-[#fdfdfd] rounded-lg">
         <input
-          className="w-[90%] my-1 lg:my-3 p-1 bg-fuchsia-900 md:bg-rose-600 border-b text-xs m-auto"
+          className="w-[90%] my-1 md:my-3 p-1 bg-fuchsia-900 md:bg-rose-600 border-b text-xs m-auto"
           id="email"
           type="email"
           name="email"
@@ -74,7 +74,7 @@ function ContactForm() {
           onChange={(e) => setData({ ...data, email: e.target.value })}
         />
         <input
-          className="w-[90%] my-1 lg:my-3 p-1 bg-fuchsia-900 md:bg-rose-600 border-b text-xs m-auto"
+          className="w-[90%] my-1 md:my-3 p-1 bg-fuchsia-900 md:bg-rose-600 border-b text-xs m-auto"
           id="phone"
           type="phone"
           name="phone"
@@ -82,9 +82,9 @@ function ContactForm() {
           required
           onChange={(e) => setData({ ...data, phone: e.target.value })}
         />
-        {/* <ValidationError prefix="Email" field="email" errors={state.errors} /> */}
+        <ValidationError prefix="Email" field="email" errors={state.errors} />
         <select
-          className="w-[90%] my-1 lg:my-3 p-1 bg-fuchsia-900 md:bg-rose-600 border-b text-xs m-auto"
+          className="w-[90%] my-1 md:my-3 p-1 bg-fuchsia-900 md:bg-rose-600 border-b text-xs m-auto"
           id="eventDate"
           name="eventDate"
           placeholder="Event Date"
@@ -108,13 +108,13 @@ function ContactForm() {
           </option>
         </select>
         <textarea
-          className="w-[90%] my-1 lg:my-3 p-1 bg-fuchsia-900 md:bg-rose-600 border-b text-xs m-auto"
+          className="w-[90%] my-1 md:my-3 p-1 bg-fuchsia-900 md:bg-rose-600 border-b text-xs m-auto"
           id="message"
           name="message"
           placeholder="Message"
           onChange={(e) => setData({ ...data, message: e.target.value })}
         />
-        {/* <ValidationError prefix="Message" field="message" errors={state.errors} /> */}
+        <ValidationError prefix="Message" field="message" errors={state.errors} />
       </div>
       <button
         className=" md:absolute font-[cedarville] whitespace-nowrap top-40 left-[50vw] lg:left-[50vw] bg-rose-200 text-fuchsia-900 my-3 py-2 px-12 text-2xl font-extralight rounded-sm shadow-lg shadow-rose-200 transition-all duration-300 m-auto"

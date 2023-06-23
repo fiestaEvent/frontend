@@ -51,9 +51,9 @@ export default function Gallery() {
         swipeable
       >
         {sources.map((source, index) => (
-          <div className="" id={index}>
+          <div className="max-w-xl" id={index}>
             <img
-              className="h-[50vh] rounded-lg relative overflow-hidden max-w-[80vw] lg:max-w-xl bg-cover"
+              className="h-[50vh] relative overflow-hidden max-w-[80vw] lg:max-w-lg bg-cover object-cover object-center"
               src={source}
               alt={index}
             />

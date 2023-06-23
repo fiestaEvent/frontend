@@ -19,7 +19,7 @@ export default function Home() {
     <div className="min-h-screen w-full flex flex-col justify-start">
       <div className="section mt-36">
         <div className="flex flex-col-reverse lg:flex-row justify-evenly items-center">
-          <img src="/logo_clean.png" className="h-64 md:h-96" alt="logo" />
+          <img src="/logo_clean.png" className="mt-20 lg:mt-0 h-64 md:h-96" alt="logo" />
           <Carousel
             autoPlay
             infiniteLoop
@@ -56,7 +56,7 @@ export default function Home() {
           Our Services
         </Link>
       </div> */}
-        <div className="flex flex-row my-20 justify-center md:justify-evenly min-w-[50vw] max-w-[70vw] m-auto text-fuchsia-900 font-black">
+        <div className="flex flex-row mb-10 mt-5 justify-center md:justify-evenly min-w-[50vw] max-w-[70vw] m-auto text-fuchsia-900 font-black">
           {pts.map((pt, index) => (
             <div className="w-fit text-lg items-center">
               {/* <i class="bx bxs-bullseye"></i> */}
@@ -64,11 +64,11 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div className="flex flex-col items-center -mb-20">
-          <span className="font-black text-2xl md:text-4xl text-yellow-400">
+        <div className="flex flex-col items-center -mb-12">
+          <span className="font-black -mt-4 text-2xl md:text-4xl text-yellow-400">
             Plan your next event with{" "}
           </span>
-          <span className="font-[poppins] text-3xl text-fuchsia-900 md:text-6xl font-black">
+          <span className="font-[poppins] text-3xl text-fuchsia-900 md:text-6xl mt-2 font-black">
             Fiesta
           </span>
         </div>

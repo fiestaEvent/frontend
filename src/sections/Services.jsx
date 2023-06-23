@@ -6,7 +6,7 @@ export default function Services() {
       <div className="text-rose-700 text-xl md:text-3xl font-bold m-auto w-fit pt-4">
         Services we <span className="text-yellow-400">Provide</span>
       </div>
-      <div className="flex flex-row flex-wrap max-w-[1000px] mx-auto items-center justify-center mt-20 ">
+      <div className="flex flex-row flex-wrap max-w-[1000px] mx-auto items-center justify-center mt-5 md:mt-20 ">
         {stats.map((stat) => (
           <div className="relative w-56 h-56 m-3 p-3 text-rose-900 flex flex-col items-end justify-between transition-all duration-200 bg-yellow-20 rounded-sm">
             <img
