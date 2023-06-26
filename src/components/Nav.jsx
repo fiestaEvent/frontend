@@ -26,6 +26,10 @@ const routes = [
     name: "Gallery",
     path: "/gallery",
   },
+  // {
+  //   name: "Blogs",
+  //   path: "/blog",
+  // }
 ];
 export default function Navbar() {
   const [open, setOpen] = useState(false);
