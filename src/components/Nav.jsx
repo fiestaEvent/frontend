@@ -26,7 +26,7 @@ const routes = [
     name: "Gallery",
     path: "/gallery",
   },
-  // {
+  // { 
   //   name: "Blogs",
   //   path: "/blog",
   // }
