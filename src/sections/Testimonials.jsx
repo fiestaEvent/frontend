@@ -3,7 +3,7 @@ export default function Testimonials() {
   return (
     <div className="">
       <div className="text-rose-700 text-xl md:text-3xl font-bold m-auto w-fit pt-4 mb-10">
-        Love from our <span className="text-yellow-400">Customers</span>
+        Love from our <span className="text-yellow-400">Clients</span>
       </div>
       <div className="flex flex-row flex-wrap items-center justify-center">
         {data.map((item) => (
