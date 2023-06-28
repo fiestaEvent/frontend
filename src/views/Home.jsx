@@ -19,7 +19,11 @@ export default function Home() {
     <div className="min-h-screen w-full flex flex-col justify-start">
       <div className="section mt-36">
         <div className="flex flex-col-reverse lg:flex-row justify-evenly items-center">
-          <img src="/logo_clean.png" className="mt-20 lg:mt-0 h-64 md:h-96" alt="logo" />
+          <img
+            src="/logo_clean.png"
+            className="mt-20 lg:mt-0 h-64 md:h-96"
+            alt="logo"
+          />
           <Carousel
             autoPlay
             infiniteLoop
@@ -56,6 +60,17 @@ export default function Home() {
           Our Services
         </Link>
       </div> */}
+        <div className="flex flex-row mt-16 mb-12  justify-center text-center md:justify-evenly min-w-[50vw] max-w-[70vw] m-auto text-fuchsia-900">
+          Your one-stop destination for all event management needs. At Fiesta,we
+          understand that every event is unique and special. Whether it's a
+          corporate conference, a grand wedding, a milestone celebration, or a
+          social gathering, we have the knowledge, resources, and creativity to
+          make it an unforgettable experiences within your budget. Don't just
+          take our word for it - see what our satisfied clients have to say in
+          our testimonials section and explore our gallery to see our last
+          works. Thank you for visiting Fiesta. We look forward to celebrate the
+          event with you and turning your dreams into reality.
+        </div>
         <div className="flex flex-row mb-10 mt-5 justify-center md:justify-evenly min-w-[50vw] max-w-[70vw] m-auto text-fuchsia-900 font-black">
           {pts.map((pt, index) => (
             <div className="w-fit text-lg items-center">

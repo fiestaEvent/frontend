@@ -7,7 +7,7 @@ export default function Testimonials() {
       </div>
       <div className="flex flex-row flex-wrap items-center justify-center">
         {data.map((item) => (
-          <div className="group scale-90 md:scale-100 text-fuchsia-900 bg-[#fdfdfd] relative min-h-[270px] w-64 border border-fuchsia-900 md:m-3 flex flex-col justify-evenly">
+          <div className="group scale-90 md:scale-100 text-fuchsia-900 bg-[#fdfdfd] relative min-h-[300px] w-80 border border-fuchsia-900 md:m-3 flex flex-col justify-evenly">
             {/* <img
               src={item.image}
               alt="bust"
