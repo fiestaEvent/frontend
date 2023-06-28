@@ -47,9 +47,7 @@ export default function Navbar() {
           to="/"
           style={{ fontFamily: `'Cedarville Cursive', cursive` }}
         >
-          {/* <img src="/f-
-          .png" alt="logo" className="h-10 w-10 inline"/> */}
-          Fiesta&nbsp;
+          <img src="/logo_clean_head.png" alt="logo" className="h-16 inline"/>
         </HashLink>
         <span className="text-amber-500 font-[handlee] text-sm font-bold">
           <i class="bx bx-right-arrow text-base"></i>
