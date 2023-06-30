@@ -43,11 +43,11 @@ export default function Navbar() {
       <div className="fixed h-20 shadow-sm bg-[#fdfdfd] w-full flex flex-row items-center justify-center">
         <HashLink
           smooth={true}
-          className="text-4xl text-fuchsia-900 pl-5"
+          className="text-fuchsia-900 pl-5"
           to="/"
           style={{ fontFamily: `'Cedarville Cursive', cursive` }}
         >
-          <img src="/logo_clean_head.png" alt="logo" className="h-16 ml-4 inline"/>
+          <img src="/logo_clean_head.png" alt="logo" className="h-12 sm:h-16 sm:ml-4 inline"/>
         </HashLink>
         <span className="text-amber-500 font-[handlee] text-sm h-0 font-bold">
           <i class="bx bx-right-arrow text-base"></i>
