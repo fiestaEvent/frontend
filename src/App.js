@@ -11,6 +11,7 @@ import Testimonial from "./views/Testimonial";
 import Gallery from "./views/Gallery";
 import Preloader from "./views/Preloader";
 import Blog from "./views/Blog";
+import BlogView from "./views/BlogView";
 function App() {
   return (
     <div className="App bg-[url('https://i.imgur.com/qXVQ2nF.pn')] bg-fuchsia-50 bg-fixed bg-cover">
@@ -50,6 +51,7 @@ function App() {
         <Routes>
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/testimonials" element={<Testimonial />} />
+          <Route path="/blog/:b" element={<BlogView />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
