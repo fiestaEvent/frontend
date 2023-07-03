@@ -33,13 +33,13 @@ export default function Blog() {
       >
         Blogs
       </div>
-      <div className="justify-evenly flex-wrap w-11/12 my-20 mx-auto hidden md:flex">
+      <div className="flex justify-evenly flex-wrap w-11/12 my-20 mx-auto md:flex">
         {blogs.map((blog, index) => (
           <div
             key={blog._id}
-            className="flex flex-col shadow-md text-[#fdfdfd] shadow-rose-900 bg-rose-400 items-center p-2"
+            className="flex flex-col w-56 rounded-sm shadow-md text-[#fdfdfd] shadow-rose-900 bg-rose-400 items-center p-2"
           >
-            <div className="h-56 w-56 rounded-sm m-3 text-sm">
+            <div className="h-56 m-3 text-sm">
               <img src={blog.Image} alt="Blog" className="object-cover h-28 w-full" />
               <div className="font-black text-2xl flex-wrap">{blog.title}</div>
             </div>
