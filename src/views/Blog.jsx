@@ -3,8 +3,10 @@ import { useEffect, useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Link } from "react-router-dom";
 import { baseUrl } from "../utils/api";
+import ApiModal from "../components/Modals/apiModal";
 export default function Blog() {
   const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     document.title = "Blogs | Fiesta";
     window.scrollTo({
@@ -13,6 +15,7 @@ export default function Blog() {
       behavior: "smooth",
     });
     async function getData() {
+      setLoading(true);
       const res = await fetch(`${baseUrl}/blogs/getAll`, {
         method: "GET",
         headers: {
@@ -22,11 +25,13 @@ export default function Blog() {
       const result = await res.json();
       console.log(result.blogs);
       setBlogs(result.blogs);
+      setLoading(false);
     }
     getData();
   }, []);
   return (
     <div className="min-h-screen w-full flex flex-col justify-start">
+      {loading && <ApiModal/>}
       <div
         className="text-xl lg:text-3xl text-purple-900 font-light w-11/12 mx-auto text-left mt-32"
         style={{ fontFamily: `'Handlee', cursive` }}

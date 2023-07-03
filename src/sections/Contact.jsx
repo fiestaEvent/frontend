@@ -19,27 +19,28 @@ const contact = [
   // },
 ];
 function ContactForm() {
-//   const [state, setState] = useState(null);
-  const [state, handleSubmit] = useForm("mvonqejy");
+  const [state, setState] = useState(null);
+  // const [state, handleSubmit] = useForm("mvonqejy");
   const [data, setData] = useState({
     email: "",
     phone: "",
     message: "",
     eventDate: "",
   });
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     const res = await fetch(`${baseUrl}/query`, {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//       body: JSON.stringify(data),
-//     });
-//     const result = await res.json();
-//     setState(result.succeeded);
-//   };
-  if (state.succeeded) {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const res = await fetch(`${baseUrl}/query`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    const result = await res.json();
+    setState(result.succeeded);
+  };
+  // if (state.succeeded) {
+  if (state === true) {
     return (<div className='flex flex-col justify-center items-center'>
 
       <p className="max-w-4xl w-72 md:w-84 text-center mt-20 lg:w-96 my-3 p-4 border-4 text-[#fdfdfd] border-fuchsia-900 m-auto">
@@ -51,13 +52,13 @@ function ContactForm() {
     </div>
     );
   }
-//   if (state === false) {
-//     return (
-//       <p className="max-w-4xl w-72 md:w-84 text-center mt-20 lg:w-96 my-3 p-4 border-4 border-fuchsia-900 m-auto">
-//         Something went wrong. Please try again later.
-//       </p>
-//     );
-//   }
+  if (state === false) {
+    return (
+      <p className="max-w-4xl w-72 md:w-84 text-center mt-20 lg:w-96 my-3 p-4 border-4 border-fuchsia-900 m-auto">
+        Something went wrong. Please try again later.
+      </p>
+    );
+  }
   return (
     <form
       onSubmit={handleSubmit}
@@ -82,7 +83,7 @@ function ContactForm() {
           required
           onChange={(e) => setData({ ...data, phone: e.target.value })}
         />
-        <ValidationError prefix="Email" field="email" errors={state.errors} />
+        {/* <ValidationError prefix="Email" field="email" errors={state.errors} /> */}
         <select
           className="w-[90%] my-1 md:my-3 p-1 bg-fuchsia-900 md:bg-rose-600 border-b text-xs m-auto"
           id="eventDate"
@@ -114,7 +115,7 @@ function ContactForm() {
           placeholder="Message"
           onChange={(e) => setData({ ...data, message: e.target.value })}
         />
-        <ValidationError prefix="Message" field="message" errors={state.errors} />
+        {/* <ValidationError prefix="Message" field="message" errors={state.errors} /> */}
       </div>
       <button
         className=" md:absolute font-[cedarville] whitespace-nowrap top-40 left-[50vw] lg:left-[50vw] bg-rose-200 text-fuchsia-900 my-3 py-2 px-12 text-2xl font-extralight rounded-sm shadow-lg shadow-rose-200 transition-all duration-300 m-auto"
