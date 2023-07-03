@@ -19,7 +19,7 @@ export default function Blog() {
       >
         Blogs
       </div>
-      <div className="justify-evenly flex-wrap w-11/12 my-20 mx-auto hidden md:flex">
+      <div className="justify-evenly flex-wrap w-11/12 my-20 mx-auto md:flex">
         {data.map((blog, index) => (
           <div className="flex flex-col shadow-md text-[#fdfdfd] shadow-rose-900 bg-rose-400 items-center p-2">
             <div className="h-56 w-56 rounded-sm m-3 text-sm">
