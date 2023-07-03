@@ -42,17 +42,18 @@ export default function Blog() {
         {blogs.map((blog, index) => (
           <div
             key={blog._id}
-            className="flex flex-col w-56 rounded-sm shadow-md text-[#fdfdfd] shadow-rose-900 bg-rose-400 items-center p-2"
+            className="flex flex-col w-56 rounded-lg shadow-sm text-[#fdfdfd] shadow-rose-900 items-center p-2"
           >
-            <div className="h-56 m-3 text-sm">
+            <div className="h-56 m-3 text-sm justify-evenly flex flex-col">
               <img src={blog.Image} alt="Blog" className="object-cover h-28 w-full" />
-              <div className="font-black text-2xl flex-wrap">{blog.title}</div>
+              <div className="font-black text-sm flex-wrap text-rose-700">{blog.title}</div>
+              <div className="text-xs text-rose-500 line-clamp-3">{blog.preview}</div>
             </div>
             <Link
               to={{
                 pathname: `/blog/${blog._id}`,
               }}
-              className="p-2 hover:font-bold w-[90%] rounded-sm"
+              className="p-2 text-rose-500 text-xs hover:font-bold w-[90%] rounded-sm"
             >
               READ BLOG
               <i class="p-1 bx bx-right-arrow-circle"></i>

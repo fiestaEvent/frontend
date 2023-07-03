@@ -11,9 +11,9 @@ export default function BlogView(props) {
   const [state, setState] = useState(null);
   const [loading, setLoading] = useState(false);
   const { b } = useParams();
-  setInterval(() => {
-    if (doneSubmit === false) setShow(true);
-  }, 1000 * 60 * 3);
+  // setInterval(() => {
+  //   if (doneSubmit === false) setShow(true);
+  // }, 1000 * 60 * 3);
 
   useEffect(() => {
     document.title = "Blog | Fiesta";
@@ -41,6 +41,10 @@ export default function BlogView(props) {
   }, []);
   return (
     <div className="min-h-screen w-full flex flex-col justify-start py-20">
+      {loading && <ApiModal />}
+      <div className="w-full h-60 overflow-hidden">
+        <img className="w-full object-cover" src={blog?.Image} alt="Header" />
+      </div>
       {show === true && (
         <EmailCollectModal
           setShow={setShow}
@@ -48,14 +52,17 @@ export default function BlogView(props) {
           show={show}
         />
       )}
-      {loading && <ApiModal />}
-      <div className="w-full h-60 overflow-hidden">
-        <img className="w-full object-cover" src={blog?.Image} alt="Header" />
-      </div>
       <article
         className="m-4 unreset"
         dangerouslySetInnerHTML={{ __html: state }}
       ></article>
+      {show === true && (
+        <EmailCollectModal
+          setShow={setShow}
+          setDoneSubmit={setDoneSubmit}
+          show={show}
+        />
+      )}
     </div>
   );
 }
