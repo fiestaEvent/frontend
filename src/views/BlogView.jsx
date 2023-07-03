@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ReactMarkdown from "react-markdown";
 import { marked } from "marked";
-import remarkGfm from "remark-gfm";
 import "../";
-export default function BlogView() {
+import { baseUrl } from "../utils/api";
+export default function BlogView(props) {
+  const [blog, setBlog] = useState(null);
   const [state, setState] = useState(null);
+  const {b} = useParams();
   useEffect(() => {
     document.title = "Blog | Fiesta";
     window.scrollTo({
@@ -13,21 +14,27 @@ export default function BlogView() {
       left: 0,
       behavior: "smooth",
     });
-    const markdown = require(`../utils/blogs/${params.b}`);
-    fetch(markdown)
-      .then((response) => {
-        return response.text();
-      })
-      .then((text) => {
-        setState(marked(text));
+    async function getData() {
+      const res = await fetch(`${baseUrl}/blogs/${b}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
       });
-      console.log(state);
+      const result = await res.json();
+      setBlog(result.blog);
+      const html = await marked.parse(result.blog.body);
+      setState(html);
+    }
+    getData();
   }, []);
-  const params = useParams();
-  console.log(`../utils/blogs/${params.b}`);
   return (
-    <div className="min-h-screen w-full flex flex-col justify-start py-28 unreset">
-        <article className="m-4" dangerouslySetInnerHTML={{__html:state}}></article>
+    <div className="min-h-screen w-full flex flex-col justify-start py-20">
+      <div className="w-full h-60 overflow-hidden"><img className="w-full object-cover" src={blog?.Image} alt="Header"/></div>
+      <article
+        className="m-4 unreset"
+        dangerouslySetInnerHTML={{ __html: state }}
+      ></article>
     </div>
   );
 }
