@@ -20,7 +20,6 @@ export default function Home() {
       <div className="section mt-36">
         <div className="flex flex-col-reverse lg:flex-row justify-evenly items-center">
           <img
-          data-aos="fade-right"
             src="/logo_clean.png"
             className="mt-20 lg:mt-0 h-64 md:h-96"
             alt="logo"

@@ -54,8 +54,8 @@ export default function Navbar() {
           Celebrate every moment
         </span>
         <div
-          id="md+"
-          className="ml-auto hidden md:flex flex-row justify-evenly w-3/5 min-w-fit align-middle"
+          id="lg+"
+          className="ml-auto hidden lg:flex flex-row justify-evenly w-3/5 min-w-fit align-middle"
         >
           {routes.map((route, index) => (
             <HashLink
@@ -69,8 +69,8 @@ export default function Navbar() {
           ))}
         </div>
         <div
-          id="md-"
-          className="ml-auto md:hidden p-3 text-fuchsia-900 rounded-full mt-1 mr-1"
+          id="lg-"
+          className="ml-auto lg:hidden p-3 text-fuchsia-900 rounded-full mt-1 mr-1"
           onClick={() => setOpen(!open)}
         >
           {!open ? (
@@ -109,7 +109,7 @@ export default function Navbar() {
 
       <div
         id="dropdown"
-        className={`fixed top-0 pt-12 h-screen w-3/4 max-w-[250px] md:hidden ${
+        className={`fixed top-0 pt-12 h-screen w-3/4 max-w-[250px] lg:hidden ${
           open ? "translate-x-0" : "-translate-x-72"
         }
          transition-all ease-in-out duration-500 flex flex-col bg-slate-50`}

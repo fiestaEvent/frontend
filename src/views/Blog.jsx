@@ -41,14 +41,14 @@ export default function Blog() {
       <div className="flex justify-evenly flex-wrap w-11/12 my-20 mx-auto md:flex">
         {blogs.map((blog, index) => (
           <div
-            data-aos="zoom-in"
+            // data-aos="zoom-in"
             key={blog._id}
-            className="flex md:scale-125 flex-col w-56 rounded-lg shadow-sm text-[#fdfdfd] bg-fuchsia-50 shadow-rose-900 items-center p-2"
+            className="flex sm:scale-125 lg:scale-150 flex-col w-56 rounded-lg shadow-sm text-[#fdfdfd] bg-fuchsia-50 shadow-rose-900 items-center p-2"
           >
             <div className="h-56 m-3 text-sm justify-evenly flex flex-col">
               <img src={blog.Image} alt="Blog" className="object-cover h-28 w-full" />
               <div className="font-black text-sm flex-wrap text-rose-700">{blog.title}</div>
-              <div className="text-xs text-rose-500 line-clamp-3">{blog.preview}</div>
+              <div className="text-xs text-fuchsia-900 line-clamp-3">{blog.preview}</div>
             </div>
             <Link
               to={{
