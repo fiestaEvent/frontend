@@ -41,6 +41,7 @@ export default function Blog() {
       <div className="flex justify-evenly flex-wrap w-11/12 my-20 mx-auto md:flex">
         {blogs.map((blog, index) => (
           <div
+            data-aos="zoom-in"
             key={blog._id}
             className="flex md:scale-125 flex-col w-56 rounded-lg shadow-sm text-[#fdfdfd] bg-fuchsia-50 shadow-rose-900 items-center p-2"
           >

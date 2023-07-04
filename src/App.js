@@ -12,7 +12,13 @@ import Gallery from "./views/Gallery";
 import Preloader from "./views/Preloader";
 import Blog from "./views/Blog";
 import BlogView from "./views/BlogView";
+import Aos from "aos";
+import "aos/dist/aos.css";
 function App() {
+  Aos.init({
+    duration: 1000,
+    once: true,
+  });
   return (
     <div className="App bg-[url('https://i.imgur.com/qXVQ2nF.pn')] bg-fuchsia-50 bg-fixed bg-cover bgjar_meteors">
       <Helmet>

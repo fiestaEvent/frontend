@@ -11,12 +11,12 @@ export default function About() {
             <div className="md:text-rose-600 underline-offset-4 md:underline">Events</div>
           </div>
           <div>
-            <img src="/corporate.png" alt="logo" className="w-[80vw] h-[50vw] md:w-[35vw] md:h-[26vw] object-cover object-center mt-8" />
+            <img src="/corporate.png" data-aos="zoom-in-left" alt="logo" className="w-[80vw] h-[50vw] md:w-[35vw] md:h-[26vw] object-cover object-center mt-8" />
           </div>
         </div>
         <div className="flex flex-col-reverse md:flex-row w-full justify-evenly items-center">
           <div>
-            <img src="/social.png" alt="logo" className="w-[80vw] h-[50vw] md:w-[35vw] md:h-[26vw] object-cover object-center mt-8 md:mt-0" />
+            <img src="/social.png" data-aos="zoom-in-right" alt="logo" className="w-[80vw] h-[50vw] md:w-[35vw] md:h-[26vw] object-cover object-center mt-8 md:mt-0" />
           </div>
           <div className="text-xl md:text-xl font-[700] h-fit bg-fuchsia-900 md:bg-transparent text-white md:text-fuchsia-900 flex flex-row md:flex-col p-4 ">
             <div className="md:text-2xl">Social&nbsp;</div>

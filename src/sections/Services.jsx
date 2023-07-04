@@ -7,8 +7,8 @@ export default function Services() {
         Services we <span className="text-yellow-400">Provide</span>
       </div>
       <div className="flex flex-row flex-wrap max-w-[1000px] mx-auto items-center justify-center mt-5 md:mt-20 ">
-        {stats.map((stat) => (
-          <div className="relative w-56 h-56 m-3 p-3 text-rose-900 flex flex-col items-end justify-between transition-all duration-200 bg-yellow-20 rounded-sm">
+        {stats.map((stat,index) => (
+          <div data-aos="flip-right" data-aos-delay={75*index} className="relative w-56 h-56 m-3 p-3 text-rose-900 flex flex-col items-end justify-between transition-all duration-200 bg-yellow-20 rounded-sm">
             <img
               src={stat.img}
               className="w-16 mx-auto p-2 outline-double"

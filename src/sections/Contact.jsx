@@ -64,7 +64,7 @@ function ContactForm() {
       onSubmit={handleSubmit}
       className="contactForm relative flex flex-col md:flex-row justify-center items-center m-auto max-w-[80vw]"
     >
-      <div className="md:absolute top-28 left-[10vw] flex flex-col min-w-[100%] md:min-w-[35vw] max-w-[80%] md:max-w-[300px] md:bg-rose-600 p-10 text-[#fdfdfd] rounded-lg">
+      <div data-aos="zoom-in-right" className="md:absolute top-28 left-[10vw] flex flex-col min-w-[100%] md:min-w-[35vw] max-w-[80%] md:max-w-[300px] md:bg-rose-600 p-10 text-[#fdfdfd] rounded-lg">
         <input
           className="w-[90%] my-1 md:my-3 p-1 bg-fuchsia-900 md:bg-rose-600 border-b text-xs m-auto"
           id="email"
