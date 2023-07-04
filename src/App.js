@@ -20,7 +20,7 @@ function App() {
     once: true,
   });
   return (
-    <div className="App bg-[url('https://i.imgur.com/qXVQ2nF.pn')] bg-fuchsia-50 bg-fixed bg-cover bgjar_meteors">
+    <div className="App bg-[url('https://i.imgur.com/qXVQ2nF.pn')] bg-fuchsia-50 bg-fixed bg-cover">
       <Helmet>
         <title>Fiesta | Events</title>
         <meta

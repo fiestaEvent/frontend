@@ -33,7 +33,7 @@ export default function Blog() {
     <div className="min-h-screen w-full flex flex-col justify-start">
       {loading && <ApiModal/>}
       <div
-        className="text-xl lg:text-3xl text-purple-900 font-light w-11/12 mx-auto text-left mt-32"
+        className="text-2xl lg:text-5xl text-purple-900 font-bold w-11/12 mx-auto text-left mt-32"
         style={{ fontFamily: `'Handlee', cursive` }}
       >
         Writer's Desk
