@@ -14,7 +14,7 @@ import Blog from "./views/Blog";
 import BlogView from "./views/BlogView";
 function App() {
   return (
-    <div className="App bg-[url('https://i.imgur.com/qXVQ2nF.pn')] bg-fuchsia-50 bg-fixed bg-cover">
+    <div className="App bg-[url('https://i.imgur.com/qXVQ2nF.pn')] bg-fuchsia-50 bg-fixed bg-cover bgjar_meteors">
       <Helmet>
         <title>Fiesta | Events</title>
         <meta

@@ -36,13 +36,13 @@ export default function Blog() {
         className="text-xl lg:text-3xl text-purple-900 font-light w-11/12 mx-auto text-left mt-32"
         style={{ fontFamily: `'Handlee', cursive` }}
       >
-        Blogs
+        Writer's Desk
       </div>
       <div className="flex justify-evenly flex-wrap w-11/12 my-20 mx-auto md:flex">
         {blogs.map((blog, index) => (
           <div
             key={blog._id}
-            className="flex flex-col w-56 rounded-lg shadow-sm text-[#fdfdfd] shadow-rose-900 items-center p-2"
+            className="flex md:scale-125 flex-col w-56 rounded-lg shadow-sm text-[#fdfdfd] bg-fuchsia-50 shadow-rose-900 items-center p-2"
           >
             <div className="h-56 m-3 text-sm justify-evenly flex flex-col">
               <img src={blog.Image} alt="Blog" className="object-cover h-28 w-full" />
@@ -55,7 +55,7 @@ export default function Blog() {
               }}
               className="p-2 text-rose-500 text-xs hover:font-bold w-[90%] rounded-sm"
             >
-              READ BLOG
+              Continue Reading
               <i class="p-1 bx bx-right-arrow-circle"></i>
             </Link>
           </div>
