@@ -20,6 +20,7 @@ export default function Gallery() {
   return (
     <div className="min-h-screen w-full flex flex-col justify-start">
       <Helmet prioritizeSeoTags>
+        <title>Gallery | Fiesta</title>
         <meta
           name="description"
           content="Have a look at the moments we helped create in our clients' lives, spreading happiness effortlessly."

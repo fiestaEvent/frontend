@@ -43,7 +43,7 @@ export default function BlogView(props) {
   return (
     <div className="min-h-screen w-full flex flex-col justify-start py-20">
       <Helmet prioritizeSeoTags>
-        <title>Fiesta | Events</title>
+        <title>{blog?.title}</title>
         <meta name="description" content={blog?.preview} />
 
         <meta itemprop="name" content="Fiesta | Events" />
