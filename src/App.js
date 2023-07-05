@@ -1,5 +1,5 @@
 import "./App.css";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Nav";
 import Footer from "./components/Foot";
 import Home from "./views/Home";
@@ -20,7 +20,7 @@ function App() {
   });
   return (
       <div className="App bg-[url('https://i.imgur.com/qXVQ2nF.pn')] bg-fuchsia-50 bg-fixed bg-cover">
-        <HashRouter>
+        <BrowserRouter>
           <Navbar />
           <Routes>
             <Route path="/gallery" element={<Gallery />} />
@@ -34,7 +34,7 @@ function App() {
             <Route path="/" element={<Preloader />} />
           </Routes>
           <Footer />
-        </HashRouter>
+        </BrowserRouter>
       </div>
   );
 }

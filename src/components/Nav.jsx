@@ -66,6 +66,14 @@ export default function Navbar() {
             >
               {route.name}
             </HashLink>
+          //   <HashLink
+          //   smooth={true}
+          //   key={index}
+          //   to={route.path}
+          //   className={`text-fuchsia-900 transition-all duration-300 ease-in-out hover:font-bold hover:test-fuchsia-900`}
+          // >
+          //   {route.name}
+          // </HashLink>
           ))}
         </div>
         <div
