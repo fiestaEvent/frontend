@@ -46,11 +46,11 @@ export default function BlogView(props) {
         <title>Fiesta | Events</title>
         <meta name="description" content={blog?.preview} />
 
-        <meta itemprop="name" content="Fiesta - Event Management" />
+        <meta itemprop="name" content="Fiesta | Events" />
         <meta itemprop="description" content={blog?.preview} />
         <meta itemprop="image" content={blog?.Image} />
 
-        <meta property="og:url" content={`https://www.fiestaevent.co.in/blog/${blog._id}`} />
+        <meta property="og:url" content={`https://www.fiestaevent.co.in/blog/${blog?._id}`} />
         <meta property="og:type" content="Blog Article" />
         <meta property="og:title" content={blog?.title} />
         <meta property="og:description" content={blog?.preview} />

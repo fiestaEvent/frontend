@@ -8,6 +8,7 @@ import About from "../sections/About";
 import Services from "../sections/Services";
 import Steps from "../sections/Steps";
 import Testimonials from "../sections/Testimonials";
+import {Helmet} from "react-helmet-async";
 export default function Home() {
   document.title = "Home | Fiesta";
   window.scrollTo({
@@ -17,6 +18,34 @@ export default function Home() {
   });
   return (
     <div className="min-h-screen w-full flex flex-col justify-start">
+      <Helmet>
+        <meta
+          name="description"
+          content="We offer professional event management services for all types of occasions, including weddings, corporate events, and parties. Trust Fiesta to handle all aspects of your event planning, from venue selection to decor and entertainment. Make your event a success with us.From intimate gatherings to large-scale events, Fiesta creates experiences that leave a lasting impression. Contact us today to start planning your event."
+        />
+        <meta itemprop="name" content="Fiesta - Event Management" />
+        <meta
+          itemprop="description"
+          content="We offer professional event management services for all types of occasions, including weddings, corporate events, and parties. Trust Fiesta to handle all aspects of your event planning, from venue selection to decor and entertainment. Make your event a success with us.From intimate gatherings to large-scale events, Fiesta creates experiences that leave a lasting impression. Contact us today to start planning your event."
+        />
+        <meta itemprop="image" content="https://i.imgur.com/ejceFwQ.png" />
+        <meta property="og:url" content="https://www.fiestaevent.co.in" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Fiesta - Event Management" />
+        <meta
+          property="og:description"
+          content="We offer professional event management services for all types of occasions, including weddings, corporate events, and parties. Trust Fiesta to handle all aspects of your event planning, from venue selection to decor and entertainment. Make your event a success with us.From intimate gatherings to large-scale events, Fiesta creates experiences that leave a lasting impression. Contact us today to start planning your event."
+        />
+        <meta property="og:image" content="https://i.imgur.com/ejceFwQ.png" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Fiesta - Event Management" />
+        <meta
+          name="twitter:description"
+          content="We offer professional event management services for all types of occasions, including weddings, corporate events, and parties. Trust Fiesta to handle all aspects of your event planning, from venue selection to decor and entertainment. Make your event a success with us.From intimate gatherings to large-scale events, Fiesta creates experiences that leave a lasting impression. Contact us today to start planning your event."
+        />
+        <meta name="twitter:image" content="https://i.imgur.com/ejceFwQ.png" />
+      </Helmet>
       <div className="section mt-36">
         <div className="flex flex-col-reverse lg:flex-row justify-evenly items-center">
           <img
@@ -83,7 +112,10 @@ export default function Home() {
           <span className="font-black -mt-4 text-2xl md:text-4xl text-yellow-400">
             Plan your next event with{" "}
           </span>
-          <span data-aos="zoom-in" className="font-[poppins] text-3xl text-fuchsia-900 md:text-6xl mt-2 font-black">
+          <span
+            data-aos="zoom-in"
+            className="font-[poppins] text-3xl text-fuchsia-900 md:text-6xl mt-2 font-black"
+          >
             Fiesta
           </span>
         </div>
