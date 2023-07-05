@@ -4,11 +4,11 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Link } from "react-router-dom";
 import { baseUrl } from "../utils/api";
 import ApiModal from "../components/Modals/apiModal";
+import { Helmet } from "react-helmet";
 export default function Blog() {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
-    document.title = "Blogs | Fiesta";
     window.scrollTo({
       top: 0,
       left: 0,
@@ -31,6 +31,10 @@ export default function Blog() {
   }, []);
   return (
     <div className="min-h-screen w-full flex flex-col justify-start">
+      <Helmet>
+        <title>Blogs | Fiesta</title>
+        <meta name="description" content="The Writer's Desk" />
+      </Helmet>
       {loading && <ApiModal/>}
       <div
         className="text-2xl lg:text-5xl text-purple-900 font-bold w-11/12 mx-auto text-left mt-32"

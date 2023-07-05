@@ -17,7 +17,6 @@ export default function BlogView(props) {
   // }, 1000 * 60 * 3);
 
   useEffect(() => {
-    document.title = "Blog | Fiesta";
     window.scrollTo({
       top: 0,
       left: 0,
