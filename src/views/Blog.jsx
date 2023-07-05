@@ -49,11 +49,12 @@ export default function Blog() {
             key={blog._id}
             className="flex sm:scale-125 lg:scale-150 flex-col w-56 rounded-lg shadow-sm text-[#fdfdfd] bg-fuchsia-50 shadow-rose-900 items-center p-2"
           >
-            <div className="h-56 m-3 text-sm justify-evenly flex flex-col">
+            <div className="h-56 m-3 mb-0 text-sm justify-evenly flex flex-col">
               <img src={blog.Image} alt="Blog" className="object-cover h-28 w-full" />
               <div className="font-black text-sm flex-wrap text-rose-700">{blog.title}</div>
               <div className="text-xs text-fuchsia-900 line-clamp-3">{blog.preview}</div>
             </div>
+              <span className="text-sm text-rose-900"><i className="bx bxs-book-open"></i>{blog.reads}</span>
             <Link
               to={{
                 pathname: `/blog/${blog._id}`,
@@ -61,7 +62,7 @@ export default function Blog() {
               className="p-2 text-rose-500 text-xs hover:font-bold w-[90%] rounded-sm"
             >
               Continue Reading
-              <i class="p-1 bx bx-right-arrow-circle"></i>
+              <i className="p-1 bx bx-right-arrow-circle"></i>
             </Link>
           </div>
         ))}

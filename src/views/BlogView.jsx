@@ -11,11 +11,11 @@ export default function BlogView(props) {
   const [blog, setBlog] = useState(null);
   const [state, setState] = useState(null);
   const [loading, setLoading] = useState(false);
+  let [read, setRead] = useState(false);
   const { b } = useParams();
   // setInterval(() => {
   //   if (doneSubmit === false) setShow(true);
   // }, 1000 * 60 * 3);
-
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -39,6 +39,28 @@ export default function BlogView(props) {
     }
     getData();
   }, [b]);
+  useEffect(() => {
+    if (read === true) {
+      async function updateReads() {
+        const res = await fetch(`${baseUrl}/blogs/${b}/read`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        const result = await res.json();
+        console.log(result);
+      }
+      updateReads();
+    }
+  }, [read, b]);
+  window.addEventListener("scroll", () => {
+    if (read === false && window.scrollY > (5 * window.innerHeight) / 6) {
+      console.log("read", read);
+      read = true && setRead(true);
+      window.removeEventListener("scroll", () => {});
+    }
+  });
   return (
     <div className="min-h-screen w-full flex flex-col justify-start py-20">
       <Helmet prioritizeSeoTags>
@@ -49,17 +71,37 @@ export default function BlogView(props) {
         <meta id={blog?._id} itemprop="description" content={blog?.preview} />
         <meta id={blog?._id} itemprop="image" content={blog?.Image} />
 
-        <meta id={blog?._id} property="og:url" content={`https://www.fiestaevent.co.in/blog/${blog?._id}`} />
+        <meta
+          id={blog?._id}
+          property="og:url"
+          content={`https://www.fiestaevent.co.in/blog/${blog?._id}`}
+        />
         <meta id={blog?._id} property="og:type" content="Blog Article" />
         <meta id={blog?._id} property="og:site_name" content="Fiesta" />
         <meta id={blog?._id} property="og:title" content={blog?.title} />
-        <meta id={blog?._id} property="og:description" content={blog?.preview} />
+        <meta
+          id={blog?._id}
+          property="og:description"
+          content={blog?.preview}
+        />
         <meta id={blog?._id} property="og:image" content={blog?.Image} />
         <meta id={blog?._id} property="og:locale" content="en_GB" />
-        <meta id={blog?._id} rel="canonical" href={`https://www.fiestaevent.co.in/blog/${blog?._id}`} />
-        <meta id={blog?._id} name="twitter:card" content="summary_large_image" />
+        <meta
+          id={blog?._id}
+          rel="canonical"
+          href={`https://www.fiestaevent.co.in/blog/${blog?._id}`}
+        />
+        <meta
+          id={blog?._id}
+          name="twitter:card"
+          content="summary_large_image"
+        />
         <meta id={blog?._id} name="twitter:title" content={blog?.title} />
-        <meta id={blog?._id} name="twitter:description" content={blog?.preview} />
+        <meta
+          id={blog?._id}
+          name="twitter:description"
+          content={blog?.preview}
+        />
         <meta id={blog?._id} name="twitter:image" content={blog?.Image} />
       </Helmet>
       {loading && <ApiModal />}
