@@ -19,12 +19,12 @@ export default function Gallery() {
   }, []);
   return (
     <div className="min-h-screen w-full flex flex-col justify-start">
-      <Helmet>
+      <Helmet prioritizeSeoTags>
         <meta
           name="description"
           content="Have a look at the moments we helped create in our clients' lives, spreading happiness effortlessly."
         />
-        <meta itemprop="name" content="Fiesta - Event Management" />
+        <meta itemprop="name" content="Gallery | Fiesta" />
         <meta
           itemprop="description"
           content="Have a look at the moments we helped create in our clients' lives, spreading happiness effortlessly."
@@ -40,7 +40,7 @@ export default function Gallery() {
         <meta property="og:image" content="https://i.imgur.com/ejceFwQ.png" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Fiesta - Event Management" />
+        <meta name="twitter:title" content="Gallery | Fiesta" />
         <meta
           name="twitter:description"
           content="Have a look at the moments we helped create in our clients' lives, spreading happiness effortlessly."
