@@ -52,13 +52,14 @@ export default function BlogView(props) {
 
         <meta property="og:url" content={`https://www.fiestaevent.co.in/blog/${blog?._id}`} />
         <meta property="og:type" content="Blog Article" />
+        <meta property="og:site_name" content="Fiesta" />
         <meta property="og:title" content={blog?.title} />
         <meta property="og:description" content={blog?.preview} />
         <meta property="og:image" content={blog?.Image} />
         <meta property="og:locale" content="en_GB" />
-d
+        <meta rel="canonical" href={`https://www.fiestaevent.co.in/blog/${blog?._id}`} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={NavigationPreloadManager?.title} />
+        <meta name="twitter:title" content={blog?.title} />
         <meta name="twitter:description" content={blog?.preview} />
         <meta name="twitter:image" content={blog?.Image} />
       </Helmet>
