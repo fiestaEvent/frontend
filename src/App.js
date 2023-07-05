@@ -1,5 +1,4 @@
 import "./App.css";
-import { Helmet, HelmetProvider } from "react-helmet-async";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Nav";
 import Footer from "./components/Foot";
@@ -20,7 +19,6 @@ function App() {
     once: true,
   });
   return (
-    <HelmetProvider>
       <div className="App bg-[url('https://i.imgur.com/qXVQ2nF.pn')] bg-fuchsia-50 bg-fixed bg-cover">
         <HashRouter>
           <Navbar />
@@ -38,7 +36,6 @@ function App() {
           <Footer />
         </HashRouter>
       </div>
-    </HelmetProvider>
   );
 }
 

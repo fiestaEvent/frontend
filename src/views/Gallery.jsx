@@ -1,6 +1,6 @@
 import FsLightbox from "fslightbox-react";
 import { useEffect, useState } from "react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import sources from "../utils/gallery.json";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -22,31 +22,63 @@ export default function Gallery() {
       <Helmet prioritizeSeoTags>
         <title>Gallery | Fiesta</title>
         <meta
+          id="Gallery-meta"
           name="description"
           content="Have a look at the moments we helped create in our clients' lives, spreading happiness effortlessly."
         />
-        <meta itemprop="name" content="Gallery | Fiesta" />
+        <meta id="Gallery-meta" itemprop="name" content="Gallery | Fiesta" />
         <meta
+          id="Gallery-meta"
           itemprop="description"
           content="Have a look at the moments we helped create in our clients' lives, spreading happiness effortlessly."
         />
-        <meta itemprop="image" content="https://i.imgur.com/ejceFwQ.png" />
-        <meta property="og:url" content="https://www.fiestaevent.co.in" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Gallery | Fiesta" />
         <meta
+          id="Gallery-meta"
+          itemprop="image"
+          content="https://i.imgur.com/ejceFwQ.png"
+        />
+        <meta
+          id="Gallery-meta"
+          property="og:url"
+          content="https://www.fiestaevent.co.in"
+        />
+        <meta id="Gallery-meta" property="og:type" content="website" />
+        <meta
+          id="Gallery-meta"
+          property="og:title"
+          content="Gallery | Fiesta"
+        />
+        <meta
+          id="Gallery-meta"
           property="og:description"
           content="Have a look at the moments we helped create in our clients' lives, spreading happiness effortlessly."
         />
-        <meta property="og:image" content="https://i.imgur.com/ejceFwQ.png" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Gallery | Fiesta" />
         <meta
+          id="Gallery-meta"
+          property="og:image"
+          content="https://i.imgur.com/ejceFwQ.png"
+        />
+
+        <meta
+          id="Gallery-meta"
+          name="twitter:card"
+          content="summary_large_image"
+        />
+        <meta
+          id="Gallery-meta"
+          name="twitter:title"
+          content="Gallery | Fiesta"
+        />
+        <meta
+          id="Gallery-meta"
           name="twitter:description"
           content="Have a look at the moments we helped create in our clients' lives, spreading happiness effortlessly."
         />
-        <meta name="twitter:image" content="https://i.imgur.com/ejceFwQ.png" />
+        <meta
+          id="Gallery-meta"
+          name="twitter:image"
+          content="https://i.imgur.com/ejceFwQ.png"
+        />
       </Helmet>
       <div
         className="text-2xl lg:text-5xl text-purple-900 font-bold w-11/12 mx-auto text-left mt-32"
