@@ -81,6 +81,16 @@ export default function Home() {
           name="twitter:image"
           content="https://i.imgur.com/ejceFwQ.png"
         />
+        <meta
+          id="home-meta"
+          name="keywords"
+          content="event management, event management company, event management company in bengaluru"
+        />
+        <meta
+          id="home-meta"
+          name="canonical"
+          href="https://www.fiestaevent.co.in/home"
+        />
       </Helmet>
       <div className="section mt-36">
         <div className="flex flex-col-reverse lg:flex-row justify-evenly items-center">

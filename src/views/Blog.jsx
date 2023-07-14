@@ -34,8 +34,35 @@ export default function Blog() {
       <Helmet>
         <title>Blogs | Fiesta</title>
         <meta name="description" content="The Writer's Desk" />
+        <meta itemprop="name" content="Gallery | Fiesta" />
+        <meta
+          itemprop="description"
+          content="Read about our events, what we do and some tips on creating your perfect event with Fiesta"
+        />
+        <meta itemprop="image" content="https://i.imgur.com/ejceFwQ.png" />
+        <meta property="og:url" content="https://www.fiestaevent.co.in/blog" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Blogs | Fiesta" />
+        <meta
+          property="og:description"
+          content="Read about our events, what we do and some tips on creating your perfect event with Fiesta"
+        />
+        <meta property="og:image" content="https://i.imgur.com/ejceFwQ.png" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Blogs | Fiesta" />
+        <meta
+          name="twitter:description"
+          content="Read about our events, what we do and some tips on creating your perfect event with Fiesta"
+        />
+        <meta name="twitter:image" content="https://i.imgur.com/ejceFwQ.png" />
+        <meta
+          name="keywords"
+          content="blog, article, online, diary, forum, blogs by Fiesta, fiesta event management in Bengaluru"
+        />
+        <meta name="canonical" href="https://www.fiestaevent.co.in/gallery" />
       </Helmet>
-      {loading && <ApiModal/>}
+      {loading && <ApiModal />}
       <div
         className="text-2xl lg:text-5xl text-purple-900 font-bold w-11/12 mx-auto text-left mt-32"
         style={{ fontFamily: `'Handlee', cursive` }}
@@ -50,11 +77,22 @@ export default function Blog() {
             className="flex sm:scale-125 lg:scale-150 flex-col w-56 rounded-lg shadow-sm text-[#fdfdfd] bg-fuchsia-50 shadow-rose-900 items-center p-2"
           >
             <div className="h-56 m-3 mb-0 text-sm justify-evenly flex flex-col">
-              <img src={blog.Image} alt="Blog" className="object-cover h-28 w-full" />
-              <div className="font-black text-sm flex-wrap text-rose-700">{blog.title}</div>
-              <div className="text-xs text-fuchsia-900 line-clamp-3">{blog.preview}</div>
+              <img
+                src={blog.Image}
+                alt="Blog"
+                className="object-cover h-28 w-full"
+              />
+              <div className="font-black text-sm flex-wrap text-rose-700">
+                {blog.title}
+              </div>
+              <div className="text-xs text-fuchsia-900 line-clamp-3">
+                {blog.preview}
+              </div>
             </div>
-              <span className="text-sm text-rose-900"><i className="bx bxs-book-open"></i>{blog.reads}</span>
+            <span className="text-sm text-rose-900">
+              <i className="bx bxs-book-open"></i>
+              {blog.reads}
+            </span>
             <Link
               to={{
                 pathname: `/blog/${blog._id}`,

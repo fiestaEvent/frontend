@@ -86,6 +86,7 @@ export default function BlogView(props) {
         />
         <meta id={blog?._id} property="og:image" content={blog?.Image} />
         <meta id={blog?._id} property="og:locale" content="en_GB" />
+        <meta id={blog?._id} property="og:locale:alternate" content="en_US" />
         <meta
           id={blog?._id}
           rel="canonical"
@@ -103,6 +104,26 @@ export default function BlogView(props) {
           content={blog?.preview}
         />
         <meta id={blog?._id} name="twitter:image" content={blog?.Image} />
+        <meta id={blog?._id} name="twitter:site" content="@fiestaevent" />
+        <meta id={blog?._id} name="twitter:creator" content="@fiestaevent" />
+        <meta
+          id={blog?._id}
+          name="twitter:domain"
+          content="fiestaevent.co.in"
+        />
+        <meta id={blog?._id} name="twitter:label1" content="Written by" />
+        <meta id={blog?._id} name="twitter:data1" content="Fiesta" />
+        <meta
+          id={blog?._id}
+          name="twitter:label2"
+          content="Est. reading time"
+        />
+        <meta id={blog?._id} name="twitter:data2" content="3 minutes" />
+        <meta
+          id={blog?._id}
+          name="keywords"
+          content="blog, article, blog by fiesta, event management in karnataka, event management in bengaluru"
+        />
       </Helmet>
       {loading && <ApiModal />}
       <div className="w-full h-60 overflow-hidden">

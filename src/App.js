@@ -3,10 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Nav";
 import Footer from "./components/Foot";
 import Home from "./views/Home";
-import About from "./views/About";
-import Services from "./views/Services";
-import Contact from "./views/Contact";
-import Testimonial from "./views/Testimonial";
 import Gallery from "./views/Gallery";
 import Preloader from "./views/Preloader";
 import Blog from "./views/Blog";
@@ -24,12 +20,8 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/gallery" element={<Gallery />} />
-            <Route path="/testimonials" element={<Testimonial />} />
             <Route path="/blog/:b" element={<BlogView />} />
             <Route path="/blog" element={<Blog />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/about" element={<About />} />
             <Route path="/home" element={<Home />} />
             <Route path="/" element={<Preloader />} />
           </Routes>

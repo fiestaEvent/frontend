@@ -79,6 +79,16 @@ export default function Gallery() {
           name="twitter:image"
           content="https://i.imgur.com/ejceFwQ.png"
         />
+        <meta
+        id="gallery-meta"
+        name="keywords"
+        content="gallery, photos, snaps, pictures, parties, event management, event management company, event management company in bengaluru"
+      />
+      <meta
+        id="gallery-meta"
+        name="canonical"
+        href="https://www.fiestaevent.co.in/gallery"
+      />
       </Helmet>
       <div
         className="text-2xl lg:text-5xl text-purple-900 font-bold w-11/12 mx-auto text-left mt-32"
