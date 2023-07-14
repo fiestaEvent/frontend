@@ -24,8 +24,8 @@ export default function Footer() {
         <div className="flex flex-row items-center justify-between mx-auto w-full md:w-fit flex-wrap">
         <img src="/logo_clean.png" alt="logo" className="h-28 sm:h-32 md:hidden  bg-fuchsia-50 rounded-full p-3 m-3" />
           <div className="flex flex-col lg:flex-row flex-wrap items-center mt-6 md:mx-auto">
-            {contact.map((stat) => (
-              <div className="p-2 lg:text-xl w-40 h-16 transition-all duration-200 m-1">
+            {contact.map((stat,index) => (
+              <div className="p-2 lg:text-xl w-40 h-16 transition-all duration-200 m-1" key={index}>
                 <div className=" text-sm md:text-lg font-semibold">{stat.name}</div>
                 <a href={stat.href}>
                   <div className="text-xs md:text-sm">{stat.path}</div>

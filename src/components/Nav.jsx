@@ -50,7 +50,7 @@ export default function Navbar() {
           <img src="/logo_clean_head.png" alt="logo" className="h-12 sm:h-16 sm:ml-4 inline"/>
         </HashLink>
         <span className="text-amber-500 font-[handlee] text-sm h-0 font-bold">
-          <i class="bx bx-right-arrow text-base"></i>
+          <i className="bx bx-right-arrow text-base"></i>
           Celebrate every moment
         </span>
         <div

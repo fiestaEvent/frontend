@@ -98,6 +98,8 @@ export default function Home() {
             src="/logo_clean.png"
             className="mt-20 lg:mt-0 h-64 md:h-96"
             alt="logo"
+            title="logo"
+            loading="eager"
           />
           <Carousel
             autoPlay
@@ -111,11 +113,13 @@ export default function Home() {
             className="max-w-xl"
           >
             {sources.map((source, index) => (
-              <div className="max-w-xl" id={index}>
+              <div className="max-w-xl" id={index} key={index}>
                 <img
                   className="h-[50vh] relative overflow-hidden max-w-[80vw] lg:max-w-lg bg-cover object-cover object-center"
                   src={source}
                   alt={index}
+                  title={`Gallery Image ${index + 1}`}
+                  loading="eager"
                 />
               </div>
             ))}
@@ -148,8 +152,8 @@ export default function Home() {
         </div>
         <div className="flex flex-row mb-10 mt-5 justify-center md:justify-evenly min-w-[50vw] max-w-[70vw] m-auto text-fuchsia-900 font-black">
           {pts.map((pt, index) => (
-            <div className="w-fit text-lg items-center">
-              {/* <i class="bx bxs-bullseye"></i> */}
+            <div className="w-fit text-lg items-center" key={index}>
+              {/* <i className="bx bxs-bullseye"></i> */}
               {pt}.&nbsp;
             </div>
           ))}

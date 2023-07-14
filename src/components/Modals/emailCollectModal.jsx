@@ -48,13 +48,15 @@ export default function EmailCollectModal(props) {
           src="https://i.imgur.com/W4AnJYe.png"
           alt="header"
           className=" object-cover h-36 w-36 md:h-48 md:w-48"
+          title="modalImage"
+          loading="eager"
         />
         <form
           onSubmit={handleSubmit}
           className="flex flex-col justify-evenly items-center w-full"
         >
           <h1 className="text-[16px] font-bold text-fuchsia-900">
-          Get your wedding planner template & checklist
+            Get your wedding planner template & checklist
             {/* Subscribe to our newsletter */}
           </h1>
           {/* <p className="text-fuchsia-900 text-xs">
@@ -75,7 +77,7 @@ export default function EmailCollectModal(props) {
             onChange={(e) => setEmail(e.target.value)}
           />
           <div className="flex">
-            <input type="checkbox" className="m-2"/>
+            <input type="checkbox" className="m-2" />
             <p className="text-fuchsia-900 text-xs">
               I agree to receive email communications from Fiesta
             </p>
@@ -85,9 +87,7 @@ export default function EmailCollectModal(props) {
               type="submit"
               className="bg-fuchsia-900 text-white rounded-md p-2 m-2 w-11/12 text-xs font-bold"
             >
-              {loading
-                ? "Loading..."
-                : "Submit"}
+              {loading ? "Loading..." : "Submit"}
             </button>
           )}
           {response !== null && (

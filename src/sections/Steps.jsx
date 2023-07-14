@@ -10,9 +10,9 @@ export default function Steps() {
       </div>
       <div className="w-full flex flex-col sm:flex-row items-center justify-center my-20">
         {data.map((step, i) => (
-          <div className="border-l-2 sm:border-l-0 sm:border-b-2 relative border-rose-700 flex flex-row items-center sm:even:mt-14 sm:odd:pb-14">
-            <i class='sm:hidden bx bxs-bullseye text-rose-700 bg-fuchsia-50 absolute -left-[11px] top-7 text-xl'></i>
-            <i class='hidden sm:block bx bxs-bullseye text-rose-700 bg-fuchsia-50 absolute left-14 -bottom-[14px] text-xl'></i>
+          <div className="border-l-2 sm:border-l-0 sm:border-b-2 relative border-rose-700 flex flex-row items-center sm:even:mt-14 sm:odd:pb-14" key={i}>
+            <i className='sm:hidden bx bxs-bullseye text-rose-700 bg-fuchsia-50 absolute -left-[11px] top-7 text-xl'></i>
+            <i className='hidden sm:block bx bxs-bullseye text-rose-700 bg-fuchsia-50 absolute left-14 -bottom-[14px] text-xl'></i>
             <div className="flex flex-row w-64 sm:w-fit m-3 sm:mx-10 sm:flex-col justify-evenly ">
               <i
                 style={{ backgroundColor: `${step.color}` }}
@@ -25,11 +25,6 @@ export default function Steps() {
                 {step.desc}
               </div>
             </div>
-            {/* {i !== data.length - 1 && (
-              <div className="hidden sm:block text-rose-900 font-bold relative">
-                -<i class='bx bxs-chevrons-right m-auto top-1 absolute' ></i>
-              </div>
-            )} */}
           </div>
         ))}
       </div>

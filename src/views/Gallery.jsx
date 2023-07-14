@@ -80,15 +80,15 @@ export default function Gallery() {
           content="https://i.imgur.com/ejceFwQ.png"
         />
         <meta
-        id="gallery-meta"
-        name="keywords"
-        content="gallery, photos, snaps, pictures, parties, event management, event management company, event management company in bengaluru"
-      />
-      <meta
-        id="gallery-meta"
-        name="canonical"
-        href="https://www.fiestaevent.co.in/gallery"
-      />
+          id="gallery-meta"
+          name="keywords"
+          content="gallery, photos, snaps, pictures, parties, event management, event management company, event management company in bengaluru"
+        />
+        <meta
+          id="gallery-meta"
+          name="canonical"
+          href="https://www.fiestaevent.co.in/gallery"
+        />
       </Helmet>
       <div
         className="text-2xl lg:text-5xl text-purple-900 font-bold w-11/12 mx-auto text-left mt-32"
@@ -98,7 +98,10 @@ export default function Gallery() {
       </div>
       <div className="justify-center flex-wrap w-11/12 my-20 mx-auto hidden md:flex">
         {sources.map((source, index) => (
-          <div className="h-52 w-72 md:h-72 md:w-96 m-2 relative overflow-hidden rounded-md">
+          <div
+            className="h-52 w-72 md:h-72 md:w-96 m-2 relative overflow-hidden rounded-md"
+            key={index}
+          >
             <img
               className="h-full group w-full object-cover rounded-md hover:scale-125 transition-all duration-300"
               src={source}
@@ -107,6 +110,8 @@ export default function Gallery() {
               onClick={() =>
                 setToggler({ toggler: !toggler.toggler, slide: index + 1 })
               }
+              title={`Click to view image ${index + 1} in full screen`}
+              loading={"lazy"}
             />
           </div>
         ))}
@@ -123,11 +128,13 @@ export default function Gallery() {
         swipeable
       >
         {sources.map((source, index) => (
-          <div className="max-w-xl" id={index}>
+          <div className="max-w-xl" id={index} key={index}>
             <img
               className="h-[50vh] relative overflow-hidden max-w-[80vw] lg:max-w-lg bg-cover object-cover object-center"
               src={source}
               alt={index}
+              title="Carousel Image"
+              loading="eager"
             />
           </div>
         ))}

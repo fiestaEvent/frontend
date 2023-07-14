@@ -1,23 +1,7 @@
-import { useForm, ValidationError } from '@formspree/react';
 import { useState } from "react";
 import { baseUrl } from "../utils/api";
 import { HashLink } from 'react-router-hash-link';
-const contact = [
-  {
-    name: "Mail",
-    path: "sristi@fiestaevent.co.in",
-    href: "mailto:sristi@fiestaevent.co.in",
-  },
-  {
-    name: "Phone",
-    path: "+91 917 690 7062",
-    href: "tel:+919176907062",
-  },
-  // {
-  //   name: "Address",
-  //   path: "",
-  // },
-];
+
 function ContactForm() {
   const [state, setState] = useState(null);
   // const [state, handleSubmit] = useForm("mvonqejy");

@@ -1,4 +1,4 @@
-import data from "../utils/testimonials.json"
+import data from "../utils/testimonials.json";
 export default function Testimonials() {
   return (
     <div className="">
@@ -6,8 +6,12 @@ export default function Testimonials() {
         Love from our <span className="text-yellow-400">Clients</span>
       </div>
       <div className="flex flex-row flex-wrap items-center justify-center">
-        {data.map((item) => (
-          <div data-aos="zoom-in" className="group scale-90 md:scale-100 text-fuchsia-900 bg-[#fdfdfd] relative min-h-[300px] w-80 border border-fuchsia-900 m-2 md:m-3 flex flex-col justify-evenly">
+        {data.map((item, index) => (
+          <div
+            data-aos="zoom-in"
+            className="group scale-90 md:scale-100 text-fuchsia-900 bg-[#fdfdfd] relative min-h-[300px] w-80 border border-fuchsia-900 m-2 md:m-3 flex flex-col justify-evenly"
+            key={index}
+          >
             {/* <img
               src={item.image}
               alt="bust"

@@ -127,7 +127,13 @@ export default function BlogView(props) {
       </Helmet>
       {loading && <ApiModal />}
       <div className="w-full h-60 overflow-hidden">
-        <img className="w-full object-cover" src={blog?.Image} alt="Header" />
+        <img
+          className="w-full object-cover"
+          src={blog?.Image}
+          alt="Header"
+          title="modalImage"
+          loading="lazy"
+        />
       </div>
       {show === true && (
         <EmailCollectModal

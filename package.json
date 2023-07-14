@@ -2,6 +2,7 @@
   "name": "fiesta-evm",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8000",
   "dependencies": {
     "@formspree/react": "^2.4.1",
     "@tailwindcss/line-clamp": "^0.4.4",
